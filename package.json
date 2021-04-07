@@ -1,7 +1,7 @@
 {
   "name": "www.journee.me",
   "private": true,
-  "description": "Track your daily habits with Journee",
+  "description": "Track your daily habits with Journee.",
   "version": "1.0.0",
   "author": "Kevin Marques <marques.developpement@gmail.com>",
   "dependencies": {
