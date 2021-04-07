@@ -13,4 +13,4 @@ jobs:
       - name: Publish Coverage
         run: yarn test:coverage:publish
         env: 
-          CODECOV_TOKEN: ffd060ad-05ce-4b43-9b03-e93e80b9a15f
+          CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
