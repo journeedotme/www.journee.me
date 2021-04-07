@@ -10,4 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn test:coverage
-      - run: yarn test:coverage:publish
+      - name: Publish Coverage
+        run: yarn test:coverage:publish
+        env: 
+          CODECOV_TOKEN: ffd060ad-05ce-4b43-9b03-e93e80b9a15f
