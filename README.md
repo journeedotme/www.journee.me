@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://www.journee.me">
-    <img alt="logo" src="/.github/readme/logo.png" width="60" />
+    <img alt="logo" src="/.github/readme/logo.png" width="80" />
   </a>
 </p>
 <h1 align="center">
