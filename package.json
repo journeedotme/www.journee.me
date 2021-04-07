@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "journee",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kevin Marques <marques.developpement@gmail.com>",
   "dependencies": {
     "gatsby": "^3.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
@@ -42,8 +42,7 @@
   "license": "0BSD",
   "scripts": {
     "commit": "git-cz",
-    "precommit": "lint-staged",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "prepare": "husky install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
