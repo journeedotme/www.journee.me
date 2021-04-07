@@ -2,7 +2,7 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-'on':
+"on":
   push:
     branches:
       - main
@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.SEMANTIC_TOKEN }}
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -24,15 +26,16 @@ jobs:
             ${{ runner.os }}-
       - run: yarn install
       - run: yarn test:coverage
+      - run: yarn release
       - name: Publish Coverage
         run: yarn test:coverage:publish
-        env: 
+        env:
           CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
       - run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOURNEEDOTME }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOURNEEDOTME }}"
           channelId: live
           projectId: journeedotme
         env:
