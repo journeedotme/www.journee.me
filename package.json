@@ -41,7 +41,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "commit": "git-cz",
+    "commit": "cz",
     "prepare": "husky install",
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -60,22 +60,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    },
-    "ghooks": {}
-  },
-  "lint-staged": {
-    "*.{js,jsx,json,css,scss}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }
