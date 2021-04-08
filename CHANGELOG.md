@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/journeedotme/www.journee.me/compare/v1.0.2...v1.1.0) (2021-04-08)
+
+
+### Features
+
+* **i18n:** install and configure react-intl ([#7](https://github.com/journeedotme/www.journee.me/issues/7)) ([6a6fdc1](https://github.com/journeedotme/www.journee.me/commit/6a6fdc1))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/journeedotme/www.journee.me/compare/v1.0.0...v1.0.2) (2021-04-08)
 
