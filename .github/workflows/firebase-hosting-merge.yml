@@ -24,22 +24,22 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - run: yarn install
-      # - run: yarn test:coverage
+      - run: yarn test:coverage
       - run: git config --global user.email "bot@journee.me"
       - run: git config --global user.name "journeedotme"
       - run: git config -l
       - run: yarn release
 
-      # - name: Publish Coverage
-      #   run: yarn test:coverage:publish
-      #   env:
-      #     CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
-      # - run: yarn build
-      # - uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: "${{ secrets.GITHUB_TOKEN }}"
-      #     firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOURNEEDOTME }}"
-      #     channelId: live
-      #     projectId: journeedotme
-      #   env:
-      #     FIREBASE_CLI_PREVIEWS: hostingchannels
+      - name: Publish Coverage
+        run: yarn test:coverage:publish
+        env:
+          CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
+      - run: yarn build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOURNEEDOTME }}"
+          channelId: live
+          projectId: journeedotme
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels
