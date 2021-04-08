@@ -1,34 +1,13 @@
-import React, { useEffect, useState } from "react"
-
+import React from "react"
 import { IntlProvider } from "react-intl"
-import en from "../../i18n/messages/en"
-import fr from "../../i18n/messages/fr"
 
-const messages = { en, fr }
+import { getLanguages } from "../../configuration/getTranslations"
 
-export const CustomIntlProvider = props => {
-  const [dynamicLanguage, setDynamicLanguage] = useState(null)
-  const { langKey } = props
+const messages = getLanguages()
 
-  useEffect(() => {
-    const { languages } = navigator
-    const language = localStorage.getItem("language")
-    const selectTheRightLanguage =
-      language ||
-      languages.find(value => /(^fr)|(^en)/gim.exec(value)) ||
-      "en"
-
-    const [lang] = selectTheRightLanguage.split("-")
-    const locale = window.location.pathname.includes("/app/") ? lang : langKey
-
-    setDynamicLanguage(locale)
-  }, [])
-
+export const CustomIntlProvider: React.FC<{ langKey: string }> = props => {
   return (
-    <IntlProvider
-      locale={dynamicLanguage || langKey}
-      messages={messages[dynamicLanguage || langKey]}
-    >
+    <IntlProvider locale={props.langKey} messages={messages[props.langKey]}>
       {props.children}
     </IntlProvider>
   )

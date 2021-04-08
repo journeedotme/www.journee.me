@@ -1,3 +1,5 @@
+const { defaultLanguage } = require("./src/configuration/languages.json")
+
 module.exports = {
   siteMetadata: {
     title: `Journee`,
@@ -36,7 +38,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: "en",
+        langKeyDefault: defaultLanguage,
         useLangKeyLayout: false,
         prefixDefault: false,
       },
