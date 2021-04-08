@@ -1,8 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Journee`,
+    description: `Track your daily routine tasks`,
+    url: `https://www.journee.me`,
+    siteUrl: `https://www.journee.me`,
+    favicon: `/manifest/16x16.png`,
+    author: "Kevin Marques",
+    image: "/manifest/192x192.png",
+    twitterUsername: "KM_Marques",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +31,14 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
+        useLangKeyLayout: false,
+        prefixDefault: false,
       },
     },
     `gatsby-plugin-gatsby-cloud`,
