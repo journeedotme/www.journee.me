@@ -1,7 +1,18 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+const {
+  languages,
+  defaultLanguage,
+} = require("./src/configuration/languages.json")
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+
+  languages.forEach(lang => {
+    createPage({
+      path: lang === defaultLanguage ? "/" : `/${lang}/`,
+      component: path.resolve(`./src/templates/static/home.tsx`),
+      context: { langKey: lang },
+    })
+  })
+}
