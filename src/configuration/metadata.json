@@ -1,0 +1,10 @@
+{
+  "title": "Journee",
+  "description": "Track your daily routine tasks",
+  "url": "https://www.journee.me",
+  "siteUrl": "https://www.journee.me",
+  "favicon": "/manifest/16x16.png",
+  "author": "Kevin Marques",
+  "image": "/manifest/192x192.png",
+  "twitterUsername": "KM_Marques"
+}

@@ -1,16 +1,8 @@
 const { defaultLanguage } = require("./src/configuration/languages.json")
+const siteMetadata = require("./src/configuration/metadata.json")
 
 module.exports = {
-  siteMetadata: {
-    title: `Journee`,
-    description: `Track your daily routine tasks`,
-    url: `https://www.journee.me`,
-    siteUrl: `https://www.journee.me`,
-    favicon: `/manifest/16x16.png`,
-    author: "Kevin Marques",
-    image: "/manifest/192x192.png",
-    twitterUsername: "KM_Marques",
-  },
+  siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,

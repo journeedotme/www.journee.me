@@ -1,11 +1,10 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
-import { useStaticQuery, graphql } from "gatsby"
+import siteMetadata from "../../configuration/metadata.json"
 
 type Breadcrumb = { label: string; url: string }
 
-const getBreadcrumb = (breadcrumbs: Breadcrumb[], endpoint) => {
+const getBreadcrumb = (breadcrumbs: Breadcrumb[], endpoint: string) => {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -25,95 +24,69 @@ export const Seo: React.FC<{
   lang: string
   article?: boolean
   breadcrumbs?: Array<Breadcrumb>
-  index?: boolean
+  index: boolean
   defaultLangUrl: string
+  pathname: string
   langUrls: Array<{ lang: string; url: string }>
-}> = ({
-  title,
-  description,
-  image,
-  article,
-  breadcrumbs,
-  index = true,
-  lang,
-  langUrls,
-  defaultLangUrl,
-}) => {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
-  const { siteUrl, favicon, defaultImage, twitterUsername } = site.siteMetadata
-
-  const seo = {
-    title,
-    favicon: favicon,
-    description: description,
-    image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
-  }
+}> = props => {
+  const image = `${siteMetadata.url}${props.image || siteMetadata.image}`
+  const url = `${siteMetadata.url}${props.pathname}`
 
   return (
-    <Helmet title={seo.title} htmlAttributes={{ lang }}>
-      {langUrls.map(({ lang, url }) => (
+    <Helmet title={props.title} htmlAttributes={{ lang: props.lang }}>
+      {props.langUrls.map(({ lang, url }) => (
         <link rel="alternate" hrefLang={lang} href={url} key={lang} />
       ))}
-      <link rel="alternate" hrefLang={"x-default"} href={defaultLangUrl} />
 
-      <link rel="icon" href={seo.favicon} />
+      <link
+        rel="alternate"
+        hrefLang={"x-default"}
+        href={props.defaultLangUrl}
+      />
 
-      <meta name="viewport" content="width=device-width, user-scalable=no"/>
+      <link rel="icon" href={siteMetadata.favicon} />
 
-      <meta name="description" content={seo.description} />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-      <meta name="image" content={seo.image} />
+      <meta name="description" content={props.description} />
 
-      {seo.url && <meta property="og:url" content={seo.url} />}
+      <meta name="image" content={image} />
 
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+      {url && <meta property="og:url" content={url} />}
 
-      {seo.title && <meta property="og:title" content={seo.title} />}
-
-      {!index && <meta name="robots" content="noindex" />}
-
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
+      {(props.article ? true : null) && (
+        <meta property="og:type" content="article" />
       )}
 
-      {seo.image && <meta property="og:image" content={seo.image} />}
+      {props.title && <meta property="og:title" content={props.title} />}
+
+      {!props.index && <meta name="robots" content="noindex" />}
+
+      {props.description && (
+        <meta property="og:description" content={props.description} />
+      )}
+
+      {props.image && <meta property="og:image" content={props.image} />}
 
       <meta name="twitter:card" content="summary_large_image" />
 
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
+      {siteMetadata.twitterUsername && (
+        <meta name="twitter:creator" content={siteMetadata.twitterUsername} />
       )}
 
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {props.title && <meta name="twitter:title" content={props.title} />}
 
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
+      {props.description && (
+        <meta name="twitter:description" content={props.description} />
       )}
 
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      {props.image && <meta name="twitter:image" content={props.image} />}
 
-      {breadcrumbs && (
+      {props.breadcrumbs && (
         <script type="application/ld+json">
-          {JSON.stringify(getBreadcrumb(breadcrumbs, siteUrl))}
+          {JSON.stringify(getBreadcrumb(props.breadcrumbs, siteMetadata.url))}
         </script>
       )}
     </Helmet>
   )
 }
-
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        defaultDescription: description
-        siteUrl: url
-        defaultImage: image
-        twitterUsername
-        favicon
-      }
-    }
-  }
-`
