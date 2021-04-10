@@ -1,9 +1,9 @@
 import React from "react"
 import { IntlProvider } from "react-intl"
 
-import { getLanguages } from "../../configuration/getTranslations"
+import { getTranslations } from "../../configuration/getTranslations"
 
-const messages = getLanguages()
+const messages = getTranslations()
 
 export const CustomIntlProvider: React.FC<{ langKey: string }> = props => {
   return (

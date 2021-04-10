@@ -16,6 +16,7 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ``,
   },
+  setupFilesAfterEnv: ["jest-expect-message"],
   testURL: `http://localhost`,
   setupFiles: ["react-app-polyfill/jsdom", `<rootDir>/jest/loadershim.js`],
   collectCoverageFrom: [
