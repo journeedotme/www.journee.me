@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 
 import metadata from "../../configuration/metadata.json"
 import FormattedMessage from "../../components/FormattedMessage/FormattedMessage"
+import SvgAcademicCap from "../../components/Icons/outline/AcademicCap"
+import SvgChevronRight from "../../components/Icons/solid/ChevronRight"
 
 const Home = () => {
   return (
@@ -47,19 +49,7 @@ const Home = () => {
                         <span className="ml-4 text-sm">
                           <FormattedMessage id="landing.hero.label.description" />
                         </span>
-                        <svg
-                          className="ml-2 w-5 h-5 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                        <SvgChevronRight className="ml-2 w-5 h-5 text-gray-500" />
                       </Link>
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                         <FormattedMessage
