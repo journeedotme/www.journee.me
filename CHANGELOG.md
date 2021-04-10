@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/journeedotme/www.journee.me/compare/v1.1.0...v1.2.0) (2021-04-10)
+
+
+### Features
+
+* add tailwind css & home page ([#9](https://github.com/journeedotme/www.journee.me/issues/9)) ([05e0ffb](https://github.com/journeedotme/www.journee.me/commit/05e0ffb))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/journeedotme/www.journee.me/compare/v1.0.2...v1.1.0) (2021-04-08)
 
