@@ -1,12 +1,10 @@
 {
   "name": "Journee",
-  "title": "Journee",
-  "description": "Track your daily routine tasks",
   "url": "https://www.journee.me",
   "siteUrl": "https://www.journee.me",
-  "favicon": "/manifest/16x16.png",
+  "favicon": "/logo/logo.svg",
   "author": "Kevin Marques",
-  "image": "/manifest/192x192.png",
+  "banner": "/og/banner.png",
   "twitterUsername": "KM_Marques",
   "github": "https://github.com/journeedotme/www.journee.me"
 }

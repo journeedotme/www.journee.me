@@ -4,6 +4,13 @@ import Home from "../home"
 
 describe("<Home /> test suite", () => {
   it("should render without error", () => {
-    render(<Home />)
+    render(
+      <Home
+        pageContext={{ langKey: "en" }}
+        location={{
+          pathname: "/",
+        }}
+      />
+    )
   })
 })

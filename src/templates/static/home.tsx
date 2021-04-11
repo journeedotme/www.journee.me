@@ -1,14 +1,26 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { useIntl } from "react-intl"
+import { Link, PageProps } from "gatsby"
 
+import { Seo } from "../../components/Seo/Seo"
 import metadata from "../../configuration/metadata.json"
 import FormattedMessage from "../../components/FormattedMessage/FormattedMessage"
-import SvgAcademicCap from "../../components/Icons/outline/AcademicCap"
 import SvgChevronRight from "../../components/Icons/solid/ChevronRight"
 
-const Home = () => {
+const Home: React.FC<PageProps<any, { langKey: string }, any>> = props => {
+  const intl = useIntl()
+
   return (
     <>
+      <Seo
+        index
+        title={intl.formatMessage({ id: "landing.seo.title" })}
+        description={intl.formatMessage({ id: "landing.seo.description" })}
+        pathname={props.location.pathname}
+        lang={props.pageContext.langKey}
+        canonical={"/"}
+      />
+
       <div className="min-h-screen bg-gray-900 overflow-hidden">
         <div className="relative">
           <header className="relative">
@@ -19,7 +31,7 @@ const Home = () => {
               >
                 <div className="flex items-center flex-1">
                   <div className="flex items-center justify-between w-full w-auto">
-                    <Link to="/" target="blank">
+                    <Link to="/">
                       <span className="sr-only">{metadata.name}</span>
                       <img
                         className="h-10 w-auto sm:h-12"
@@ -39,8 +51,9 @@ const Home = () => {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                   <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                     <div className="lg:py-24">
-                      <Link
-                        to={metadata.github}
+                      <a
+                        href={metadata.github}
+                        target="blank"
                         className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                       >
                         <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-b from-blue-400 to-blue-600 shadow-sm rounded-full">
@@ -50,7 +63,8 @@ const Home = () => {
                           <FormattedMessage id="landing.hero.label.description" />
                         </span>
                         <SvgChevronRight className="ml-2 w-5 h-5 text-gray-500" />
-                      </Link>
+                      </a>
+
                       <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                         <FormattedMessage
                           id="landing.hero.title"
