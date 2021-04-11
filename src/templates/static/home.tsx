@@ -4,8 +4,9 @@ import { Link, PageProps } from "gatsby"
 
 import { Seo } from "../../components/Seo/Seo"
 import metadata from "../../configuration/metadata.json"
-import FormattedMessage from "../../components/FormattedMessage/FormattedMessage"
+import { FormattedMessage } from "../../components/FormattedMessage/FormattedMessage"
 import SvgChevronRight from "../../components/Icons/solid/ChevronRight"
+import { GoogleAuthenticationButton } from "../../components/GoogleAuthenticationButton/GoogleAuthenticationButton"
 
 const Home: React.FC<{
   location: { pathname: string }
@@ -83,7 +84,9 @@ const Home: React.FC<{
                       <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                         <FormattedMessage id="landing.hero.description" />
                       </p>
-                      <div className="mt-10 sm:mt-12"></div>
+                      <div className="mt-10 sm:mt-12">
+                        <GoogleAuthenticationButton />
+                      </div>
                     </div>
                   </div>
                   <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">

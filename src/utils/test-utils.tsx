@@ -1,13 +1,22 @@
 import React, { ReactElement } from "react"
 import { render } from "@testing-library/react"
 import { CustomIntlProvider } from "../components/CustomIntlProvider/CustomIntlProvider"
+import { createStoreForTests } from "./createStoreForTests"
+import { Provider } from "react-redux"
 
-const AllTheProviders = ({ children }) => (
-  <CustomIntlProvider langKey="en">{children}</CustomIntlProvider>
-)
+const Providers = ({ children }) => {
+  const { store } = createStoreForTests()
 
-const customRender = (ui: ReactElement, options?: any) =>
-  render(ui, { wrapper: AllTheProviders, ...options })
+  return (
+    <Provider store={store}>
+      <CustomIntlProvider langKey="en">{children}</CustomIntlProvider>
+    </Provider>
+  )
+}
+
+const customRender = (ui: ReactElement, options?: any) => {
+  return render(ui, { wrapper: Providers, ...options })
+}
 
 // re-export everything
 export * from "@testing-library/react"
