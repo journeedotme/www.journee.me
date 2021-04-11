@@ -1,3 +1,13 @@
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/journeedotme/www.journee.me/compare/v1.4.0...v1.5.0) (2021-04-11)
+
+
+### Features
+
+* **redux:** add redux and auth reducer with in memory implementation ([#14](https://github.com/journeedotme/www.journee.me/issues/14)) ([2072620](https://github.com/journeedotme/www.journee.me/commit/2072620))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/journeedotme/www.journee.me/compare/v1.3.1...v1.4.0) (2021-04-11)
 
