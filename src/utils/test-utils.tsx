@@ -2,7 +2,7 @@ import React, { ReactElement } from "react"
 import { render } from "@testing-library/react"
 import { CustomIntlProvider } from "../components/CustomIntlProvider/CustomIntlProvider"
 import { createStoreForTests } from "./createStoreForTests"
-import { Provider } from "react-intl/src/components/injectIntl"
+import { Provider } from "react-redux"
 
 const Providers = ({ children }) => {
   const { store } = createStoreForTests()
