@@ -1668,6 +1668,11 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@headlessui/react@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-0.3.2.tgz#fa8600fa669fe704b84e9256855fb39092b6e233"
+  integrity sha512-N8XpYJNEP1jH5V8qq2cX8pnipOd93UJNKky1B7Ac3/yFFehB/0C4k5kOHt8ShHsmcohrZUB4sOl4+m0CjQpXng==
+
 "@iarna/toml@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
@@ -7487,6 +7492,13 @@ gatsby-page-utils@^1.2.0:
     glob "^7.1.6"
     lodash "^4.17.21"
     micromatch "^4.0.2"
+
+gatsby-plugin-create-client-paths@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-create-client-paths/-/gatsby-plugin-create-client-paths-3.2.0.tgz#683cd3ff34742f5f8ef7ef0aaff0f89ec7a35305"
+  integrity sha512-ttIJlGwJqjUCnvsyKyu7CpDBUiAB+r2ozBfW3EzrsmoVxRkEhaR0l2zItdO+bxDiLGDpjQ2sxYrjnh11cH7C8A==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 gatsby-plugin-gatsby-cloud@^2.2.0:
   version "2.2.0"

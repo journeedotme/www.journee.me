@@ -27,7 +27,7 @@ const Home: React.FC<{
 
       <div className="min-h-screen bg-gray-900 overflow-hidden">
         <div className="relative">
-          <header className="relative">
+          <header className="relative z-10">
             <div className="pt-6">
               <nav
                 className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"

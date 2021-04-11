@@ -10,5 +10,5 @@ export default {
   "landing.hero.title": "Suivez quotidiennement vos <b>tâches journalières</b>",
   "landing.hero.description":
     "Vous avez des journées riches en habitudes, ou bien vous souhaitez être plus rigoureux journalièrement ? Journee vous permet de suivre simplement vos habitudes quotidiennes et voir à quel moment vous avez réussi ou non à faire toutes vos tâches. Journee est entièrement gratuit, sans pub et Open Source.",
-  "landing.hero.signin.button.text": "Commencer",
+  "landing.hero.signin.button.text": "Commencer (Mode démo)",
 } as typeof en
