@@ -1,3 +1,13 @@
+<a name="1.3.1"></a>
+## [1.3.1](https://github.com/journeedotme/www.journee.me/compare/v1.3.0...v1.3.1) (2021-04-11)
+
+
+### Bug Fixes
+
+* **og:** add og image on head ([#12](https://github.com/journeedotme/www.journee.me/issues/12)) ([ea07a42](https://github.com/journeedotme/www.journee.me/commit/ea07a42))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/journeedotme/www.journee.me/compare/v1.2.0...v1.3.0) (2021-04-11)
 
