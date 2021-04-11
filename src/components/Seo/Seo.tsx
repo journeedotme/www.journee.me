@@ -62,7 +62,7 @@ export const Seo: React.FC<{
         <meta property="og:description" content={props.description} />
       )}
 
-      {props.image && <meta property="og:image" content={props.image} />}
+      <meta property="og:image" content={image} />
 
       <meta name="twitter:card" content="summary_large_image" />
 
@@ -76,7 +76,7 @@ export const Seo: React.FC<{
         <meta name="twitter:description" content={props.description} />
       )}
 
-      {props.image && <meta name="twitter:image" content={props.image} />}
+      <meta name="twitter:image" content={image} />
 
       {props.breadcrumbs && (
         <script type="application/ld+json">

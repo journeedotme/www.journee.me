@@ -7,7 +7,10 @@ import metadata from "../../configuration/metadata.json"
 import FormattedMessage from "../../components/FormattedMessage/FormattedMessage"
 import SvgChevronRight from "../../components/Icons/solid/ChevronRight"
 
-const Home: React.FC<PageProps<any, { langKey: string }, any>> = props => {
+const Home: React.FC<{
+  location: { pathname: string }
+  pageContext: { langKey: string }
+}> = props => {
   const intl = useIntl()
 
   return (

@@ -4,7 +4,7 @@ export default {
   "landing.title": "Bonjour",
   "landing.seo.title": "Suivi de tâche journalière | Journee",
   "landing.seo.description":
-    "Votre journée est riche en évènements et en tâche à faire ? Aidez-vous avez l'aide de Journee.",
+    "Votre journée est riche en évènements et en tâche à faire ? Aidez-vous avec l'aide de Journee.",
   "landing.hero.label.title": "Open Source",
   "landing.hero.label.description": "Envie de contribuer ?",
   "landing.hero.title": "Suivez quotidiennement vos <b>tâches journalières</b>",

@@ -10,7 +10,7 @@ export const getTranslations = () => {
 
 export const getUrl = (url: string, lang: string) => {
   if (lang === configuration.defaultLanguage) return { url, lang }
-  return { url: url + lang + "/", lang }
+  return { url: "/" + lang + url, lang }
 }
 
 export const getUrls = (url: string) => {
