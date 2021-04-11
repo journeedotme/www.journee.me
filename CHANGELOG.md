@@ -1,3 +1,13 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/journeedotme/www.journee.me/compare/v1.3.1...v1.4.0) (2021-04-11)
+
+
+### Features
+
+* **sitemap:** add sitemap generation ([#13](https://github.com/journeedotme/www.journee.me/issues/13)) ([a770190](https://github.com/journeedotme/www.journee.me/commit/a770190))
+
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/journeedotme/www.journee.me/compare/v1.3.0...v1.3.1) (2021-04-11)
 
