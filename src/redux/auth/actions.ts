@@ -27,19 +27,19 @@ export const $authenticateWithGoogle = (): ThunkAction<
   RootState,
   any,
   any
-> => (dispatcher, getState) => {
+> => async (dispatcher, getState) => {
   const { di } = getState()
 
   dispatcher(fetching())
 
-  return di.AuthRepository.authenticateWithGoogle().then(response => {
-    if (!response.authenticated)
-      return new ErrorEntity(response.error).getMessage()
+  const response = await di.AuthRepository.authenticateWithGoogle()
 
-    dispatcher(authenticate({ user: response.user }))
+  if (!response.authenticated)
+    return new ErrorEntity(response.error).getMessage()
 
-    dispatcher(fetchEnd())
-  })
+  dispatcher(authenticate({ user: response.user }))
+
+  dispatcher(fetchEnd())
 }
 
 export const $isAuthenticated = (): ThunkAction<

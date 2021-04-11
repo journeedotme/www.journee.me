@@ -8,6 +8,6 @@ type FormattedMessageProps = {
   children?: () => React.ReactElement
 }
 
-export default function FormattedMessage(props: FormattedMessageProps) {
+export function FormattedMessage(props: FormattedMessageProps) {
   return <ReactFormattedMessage {...props}></ReactFormattedMessage>
 }

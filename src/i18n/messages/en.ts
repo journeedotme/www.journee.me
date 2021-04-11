@@ -8,4 +8,5 @@ export default {
   "landing.hero.title": "Track your daily <b>habits</b>",
   "landing.hero.description":
     "Journee helps you create and maintain great habits. Completely free and open-source.",
+  "landing.hero.signin.button.text": "Get Started",
 }
