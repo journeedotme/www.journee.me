@@ -35,6 +35,13 @@ module.exports = {
         prefixDefault: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [],
+        sitemapSize: 5000,
+      },
+    },
     "gatsby-plugin-postcss",
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
