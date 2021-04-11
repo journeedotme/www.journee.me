@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/journeedotme/www.journee.me/compare/v1.2.0...v1.3.0) (2021-04-11)
+
+
+### Features
+
+* **seo:** add seo component ([#11](https://github.com/journeedotme/www.journee.me/issues/11)) ([cd2f375](https://github.com/journeedotme/www.journee.me/commit/cd2f375))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/journeedotme/www.journee.me/compare/v1.1.0...v1.2.0) (2021-04-10)
 
