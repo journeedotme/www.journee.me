@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { getUrls } from "../../configuration/getTranslations"
 import siteMetadata from "../../configuration/metadata.json"
 
 type Breadcrumb = { label: string; url: string }
@@ -20,29 +21,24 @@ const getBreadcrumb = (breadcrumbs: Breadcrumb[], endpoint: string) => {
 export const Seo: React.FC<{
   title: string
   description: string
-  image?: string
   lang: string
-  article?: boolean
-  breadcrumbs?: Array<Breadcrumb>
   index: boolean
-  defaultLangUrl: string
   pathname: string
-  langUrls: Array<{ lang: string; url: string }>
+  canonical: string
+  breadcrumbs?: Array<Breadcrumb>
+  image?: string
+  article?: boolean
 }> = props => {
-  const image = `${siteMetadata.url}${props.image || siteMetadata.image}`
+  const image = `${siteMetadata.url}${props.image || siteMetadata.banner}`
   const url = `${siteMetadata.url}${props.pathname}`
 
   return (
     <Helmet title={props.title} htmlAttributes={{ lang: props.lang }}>
-      {props.langUrls.map(({ lang, url }) => (
+      {getUrls(props.canonical).map(({ lang, url }) => (
         <link rel="alternate" hrefLang={lang} href={url} key={lang} />
       ))}
 
-      <link
-        rel="alternate"
-        hrefLang={"x-default"}
-        href={props.defaultLangUrl}
-      />
+      <link rel="alternate" hrefLang={"x-default"} href={props.canonical} />
 
       <link rel="icon" href={siteMetadata.favicon} />
 
@@ -58,7 +54,7 @@ export const Seo: React.FC<{
         <meta property="og:type" content="article" />
       )}
 
-      {props.title && <meta property="og:title" content={props.title} />}
+      <meta property="og:title" content={props.title} data-testid="og:title" />
 
       {!props.index && <meta name="robots" content="noindex" />}
 

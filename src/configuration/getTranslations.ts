@@ -7,3 +7,12 @@ export const getTranslations = () => {
     return accumulator
   }, {}) as { [key: string]: { [key: string]: string } }
 }
+
+export const getUrl = (url: string, lang: string) => {
+  if (lang === configuration.defaultLanguage) return { url, lang }
+  return { url: url + lang + "/", lang }
+}
+
+export const getUrls = (url: string) => {
+  return configuration.languages.map(lang => getUrl(url, lang))
+}
