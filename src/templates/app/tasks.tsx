@@ -4,8 +4,13 @@ import { RouteComponentProps } from "@reach/router"
 import { Seo } from "../../components/Seo/Seo"
 import { Navbar } from "../../components/Navbar/Navbar"
 import { Task } from "../../components/Task/Task"
+// TODO SVG shit
 import Arrow from "../../assets/tasks/arrow.svg"
 import { AddTaskButton } from "../../components/AddTaskButton/AddTaskButton"
+import { AddTaskModal } from "../../components/AddTaskModal/AddTaskModal"
+import { RenameTaskModal } from "../../components/RenameTaskModal/RenameTaskModal"
+import { RemoveTaskModal } from "../../components/RemoveTaskModal/RemoveTaskModal"
+import { ActionsTaskModal } from "../../components/ActionsTaskModal/ActionsTaskModal"
 
 export const Tasks: React.FC<
   {
@@ -43,6 +48,10 @@ export const Tasks: React.FC<
       </div>
 
       <AddTaskButton />
+      <AddTaskModal />
+      <ActionsTaskModal />
+      <RenameTaskModal />
+      <RemoveTaskModal />
     </>
   )
 }

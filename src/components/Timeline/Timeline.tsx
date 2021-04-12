@@ -35,7 +35,7 @@ export const Wrapper: React.FC = props => {
     <div className="relative bg-white">
       <div className="px-2 py-2 mx-auto max-w-7xl">
         <div className="w-full bg-gray-100 rounded">
-          <div className="flex justify-between">
+          <div className="grid grid-cols-7">
             <Item numeric={8} day={"Mon"} />
             <Item numeric={9} day={"Tue"} />
             <Item numeric={10} day={"Wed"} active />

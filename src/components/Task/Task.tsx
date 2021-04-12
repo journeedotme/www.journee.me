@@ -7,7 +7,7 @@ const Item: React.FC<{
   active?: boolean
 }> = props => (
   <div
-    className={`text-center border-2 border-gray-200 rounded-full h-8 w-8 text-white ${
+    className={`mx-auto text-center border-2 border-gray-200 rounded-full h-8 w-8 text-white ${
       props.active
         ? "bg-blue-400 border-blue-400 text-white"
         : "bg-transparent text-gray-600"
@@ -17,7 +17,7 @@ const Item: React.FC<{
   </div>
 )
 
-export const Wrapper: React.FC = props => {
+export const Wrapper: React.FC<{ onActions: () => void }> = props => {
   return (
     <div className="relative bg-white shadow-sm">
       <div className="w-full pt-1 pb-5">
@@ -26,11 +26,11 @@ export const Wrapper: React.FC = props => {
             <div className="px-4 text-lg font-medium leading-6 text-gray-800">
               Meditation
             </div>
-            <button className="p-3">
+            <button className="p-3" onClick={props.onActions}>
               <SvgDotsVertical className="w-6 h-6 text-gray-400" />
             </button>
           </div>
-          <div className="flex justify-between px-4 mt-2">
+          <div className="grid grid-cols-7 px-2 mx-auto mt-2">
             <Item />
             <Item />
             <Item active />

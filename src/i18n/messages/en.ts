@@ -11,4 +11,6 @@ export default {
   "landing.hero.signin.button.text": "Get Started (Demo mode)",
   "tasks.seo.title": "Your daily tasks | Journee",
   "tasks.seo.description": "Create, update and set tasks as done with Journee",
+  "modal.actions.rename": "Rename",
+  "modal.actions.remove": "Remove",
 }

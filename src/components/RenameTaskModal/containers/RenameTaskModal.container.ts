@@ -3,11 +3,13 @@ import { actions } from "../../../redux/actions"
 import { RootState } from "../../../redux/store"
 
 const mapState = (state: RootState, props) => {
-  return {}
+  return {
+    isOpen: state.modal.open?.type === "rename-task",
+  }
 }
 
 const mapDispatch = (dispatch: any) => ({
-  onClick: () => dispatch(actions.modal.open({ type: "add-task" })),
+  onClose: () => dispatch(actions.modal.close()),
 })
 
 export const connector = connect(mapState, mapDispatch)

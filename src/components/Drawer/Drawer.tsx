@@ -28,7 +28,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
     >
       <div className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform">
         <div
-          className="absolute top-0 left-0 w-full min-h-screen bg-transparent"
+          className="absolute top-0 left-0 w-full min-h-screen bg-gray-900 opacity-20"
           onClick={() => props.onClose()}
         />
         <div className="container relative mx-auto bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
