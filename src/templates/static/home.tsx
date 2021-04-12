@@ -25,20 +25,20 @@ const Home: React.FC<{
         canonical={"/"}
       />
 
-      <div className="min-h-screen bg-gray-900 overflow-hidden">
+      <div className="min-h-screen overflow-hidden bg-gray-900">
         <div className="relative">
           <header className="relative z-10">
             <div className="pt-6">
               <nav
-                className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+                className="relative flex items-center justify-between px-4 mx-auto max-w-7xl sm:px-6"
                 aria-label="Global"
               >
                 <div className="flex items-center flex-1">
-                  <div className="flex items-center justify-between w-full w-auto">
+                  <div className="flex items-center justify-between w-auto w-full">
                     <Link to="/">
                       <span className="sr-only">{metadata.name}</span>
                       <img
-                        className="h-10 w-auto sm:h-12"
+                        className="w-auto h-10 sm:h-12"
                         src="/logo/logo.svg"
                         alt=""
                       />
@@ -53,12 +53,12 @@ const Home: React.FC<{
             <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
               <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+                  <div className="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                     <div className="lg:py-24">
                       <a
                         href={metadata.github}
                         target="blank"
-                        className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
+                        className="inline-flex items-center p-1 pr-2 text-white bg-black rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                       >
                         <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-b from-blue-400 to-blue-600 shadow-sm rounded-full">
                           <FormattedMessage id="landing.hero.label.title" />
@@ -66,15 +66,15 @@ const Home: React.FC<{
                         <span className="ml-4 text-sm">
                           <FormattedMessage id="landing.hero.label.description" />
                         </span>
-                        <SvgChevronRight className="ml-2 w-5 h-5 text-gray-500" />
+                        <SvgChevronRight className="w-5 h-5 ml-2 text-gray-500" />
                       </a>
 
-                      <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                      <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                         <FormattedMessage
                           id="landing.hero.title"
                           values={{
                             b: element => (
-                              <span className="block bg-clip-text text-transparent bg-gradient-to-b from-blue-300 to-blue-500">
+                              <span className="block text-transparent bg-clip-text bg-gradient-to-b from-blue-300 to-blue-500">
                                 {element}
                               </span>
                             ),
@@ -90,7 +90,7 @@ const Home: React.FC<{
                     </div>
                   </div>
                   <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                    <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                    <div className="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                       <img
                         className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                         src="/landing/illustration.svg"

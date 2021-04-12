@@ -9,4 +9,6 @@ export default {
   "landing.hero.description":
     "Journee helps you create and maintain great habits. Completely free and open-source.",
   "landing.hero.signin.button.text": "Get Started (Demo mode)",
+  "tasks.seo.title": "Your daily tasks | Journee",
+  "tasks.seo.description": "Create, update and set tasks as done with Journee",
 }

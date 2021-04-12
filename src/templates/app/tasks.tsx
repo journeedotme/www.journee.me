@@ -3,6 +3,9 @@ import { useIntl } from "react-intl"
 import { RouteComponentProps } from "@reach/router"
 import { Seo } from "../../components/Seo/Seo"
 import { Navbar } from "../../components/Navbar/Navbar"
+import { Task } from "../../components/Task/Task"
+import Arrow from "../../assets/tasks/arrow.svg"
+import { AddTaskButton } from "../../components/AddTaskButton/AddTaskButton"
 
 export const Tasks: React.FC<
   {
@@ -23,9 +26,23 @@ export const Tasks: React.FC<
         canonical={"/tasks/"}
       />
 
-      <div className="relative bg-gray-50 min-h-screen">
-        <Navbar />
+      <div className="relative min-h-screen bg-gray-50">
+        <Navbar withTimeline />
+        <div className="pt-2 space-y-2">
+          <Task />
+        </div>
+        <div className="py-8">
+          <div className="w-full pb-8 text-2xl font-bold text-center">
+            <div className="leading-7 text-gray-700">Keep motivation !</div>
+            <div className="leading-8 text-blue-400">
+              And add new task in your daily routine.
+            </div>
+          </div>
+          <img src={Arrow} className="m-auto"></img>
+        </div>
       </div>
+
+      <AddTaskButton />
     </>
   )
 }

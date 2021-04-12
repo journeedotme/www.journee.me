@@ -31,12 +31,12 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
           className="absolute top-0 left-0 w-full min-h-screen bg-transparent"
           onClick={() => props.onClose()}
         />
-        <div className="container mx-auto relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-          <div className="pt-5 pb-6 px-5">
+        <div className="container relative mx-auto bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
+          <div className="px-5 pt-5 pb-6">
             <div className="flex items-center justify-between">
               <div>
                 <img
-                  className="h-9 w-auto"
+                  className="w-auto h-9"
                   src="/logo/logo.svg"
                   alt="Workflow"
                 />
@@ -45,10 +45,10 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
                 <button
                   onClick={props.onClose}
                   type="button"
-                  className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 >
                   <span className="sr-only">Close menu</span>
-                  <SvgX className="h-6 w-6" />
+                  <SvgX className="w-6 h-6" />
                 </button>
               </div>
             </div>
@@ -56,7 +56,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
               <nav className="grid gap-y-8">
                 <a
                   href="#"
-                  className="-m-3 py-3 flex items-center rounded-md hover:bg-gray-50"
+                  className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Home
@@ -64,7 +64,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
                 </a>
                 <a
                   href="#"
-                  className="-m-3 py-3 flex items-center rounded-md hover:bg-gray-50"
+                  className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
                     My Daily Routine
@@ -73,11 +73,11 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
               </nav>
             </div>
           </div>
-          <div className="py-6 px-2 space-y-6">
-            <div className="mx-auto px-4 flex items-center sm:px-6">
+          <div className="px-2 py-6 space-y-6">
+            <div className="flex items-center px-4 mx-auto sm:px-6">
               <div className="flex-shrink-0">
                 <img
-                  className="h-10 w-10 rounded-full"
+                  className="w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixqx=dAdD8ntwdB&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt=""
                 />
@@ -94,7 +94,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
             <div className="px-3">
               <a
                 href="#"
-                className="-m-3 py-3 flex items-center rounded-md hover:bg-gray-50"
+                className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
               >
                 <span className="ml-3 text-base font-medium text-gray-900">
                   Sign out
