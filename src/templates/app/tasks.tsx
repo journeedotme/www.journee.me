@@ -11,6 +11,7 @@ import { AddTaskModal } from "../../components/AddTaskModal/AddTaskModal"
 import { RenameTaskModal } from "../../components/RenameTaskModal/RenameTaskModal"
 import { RemoveTaskModal } from "../../components/RemoveTaskModal/RemoveTaskModal"
 import { ActionsTaskModal } from "../../components/ActionsTaskModal/ActionsTaskModal"
+import { ModalOverlay } from "../../components/ModalOverlay/ModalOverlay"
 
 export const Tasks: React.FC<
   {
@@ -34,7 +35,7 @@ export const Tasks: React.FC<
       <div className="relative min-h-screen bg-gray-50">
         <Navbar withTimeline />
         <div className="pt-2 space-y-2">
-          <Task />
+          <Task id="1" />
         </div>
         <div className="py-8">
           <div className="w-full pb-8 text-2xl font-bold text-center">
@@ -47,9 +48,10 @@ export const Tasks: React.FC<
         </div>
       </div>
 
+      <ModalOverlay />
+      <ActionsTaskModal />
       <AddTaskButton />
       <AddTaskModal />
-      <ActionsTaskModal />
       <RenameTaskModal />
       <RemoveTaskModal />
     </>

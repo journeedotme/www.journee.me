@@ -4,17 +4,21 @@ import { actions } from "../../../redux/actions"
 import { RootState } from "../../../redux/store"
 
 const mapState = (state: RootState, props) => {
-  return {
-    isOpen: state.modal.open?.type === "actions-task",
-  }
+  if (state.modal.open?.type === "actions-task")
+    return {
+      id: state.modal.open.id,
+      isOpen: true,
+    }
+
+  return { isOpen: false }
 }
 
 const mapDispatch = (dispatch: any) => ({
   onClose: () => dispatch(actions.modal.close()),
-  onRename: (id: TaskEntity["id"]) =>
-    dispatch(actions.modal.open({ type: "rename-task", id })),
-  onRemove: (id: TaskEntity["id"]) =>
-    dispatch(actions.modal.open({ type: "remove-task", id })),
+  onRename: (id?: TaskEntity["id"]) =>
+    id && dispatch(actions.modal.open({ type: "rename-task", id })),
+  onRemove: (id?: TaskEntity["id"]) =>
+    id && dispatch(actions.modal.open({ type: "remove-task", id })),
 })
 
 export const connector = connect(mapState, mapDispatch)

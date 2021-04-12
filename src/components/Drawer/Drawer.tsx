@@ -3,7 +3,7 @@ import { Transition } from "@headlessui/react"
 import { useLocation } from "@reach/router"
 import { connector, ContainerProps } from "./containers/Drawer.container"
 import { UserEntity } from "../../entities/UserEntity"
-import SvgX from "../Icons/outline/X"
+import X from "../Icons/outline/X"
 
 export type DrawerProps = {
   onClose: () => void
@@ -48,7 +48,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
                   className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 >
                   <span className="sr-only">Close menu</span>
-                  <SvgX className="w-6 h-6" />
+                  <X className="w-6 h-6" />
                 </button>
               </div>
             </div>

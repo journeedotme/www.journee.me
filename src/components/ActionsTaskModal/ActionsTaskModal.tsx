@@ -1,8 +1,9 @@
 import * as React from "react"
+import { TaskEntity } from "../../entities/TaskEntity"
 import { BaseModal } from "../BaseModal/BaseModal"
 import { FormattedMessage } from "../FormattedMessage/FormattedMessage"
-import SvgPencil from "../Icons/outline/Pencil"
-import SvgTrash from "../Icons/outline/Trash"
+import Pencil from "../Icons/outline/Pencil"
+import Trash from "../Icons/outline/Trash"
 
 import {
   connector,
@@ -27,25 +28,26 @@ const Item: React.FC<{
 )
 
 export const Wrapper: React.FC<{
+  id?: TaskEntity["id"]
   isOpen: boolean
   onClose: () => void
-  onRename: () => void
-  onRemove: () => void
+  onRename: (id?: TaskEntity["id"]) => void
+  onRemove: (id?: TaskEntity["id"]) => void
 }> = props => {
   return (
     <BaseModal isOpen={props.isOpen} onClose={props.onClose}>
       <div className="inline-block w-full max-w-md px-4 pt-5 pb-4 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl">
         <div className="space-y-1" aria-label="Sidebar">
           <Item
-            icon={<SvgPencil />}
+            icon={<Pencil />}
             label={<FormattedMessage id="modal.actions.rename" />}
-            onClick={props.onRename}
+            onClick={() => props.onRename(props.id)}
           />
 
           <Item
-            icon={<SvgTrash />}
+            icon={<Trash />}
             label={<FormattedMessage id="modal.actions.remove" />}
-            onClick={props.onRemove}
+            onClick={() => props.onRemove(props.id)}
           />
         </div>
 
@@ -54,7 +56,7 @@ export const Wrapper: React.FC<{
           onClick={props.onClose}
           className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
-          Cancel
+          <FormattedMessage id="modal.actions.cancel" />
         </button>
       </div>
     </BaseModal>

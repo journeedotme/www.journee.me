@@ -15,17 +15,10 @@ export const BaseModal: React.FC<{
         aria-modal="true"
       >
         <div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center">
-          <Transition.Child
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
+          <Transition.Child>
             <div
               onClick={props.onClose}
-              className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"
+              className="fixed inset-0"
               aria-hidden="true"
             ></div>
           </Transition.Child>
