@@ -10,6 +10,7 @@ describe("tasks tests suite", () => {
     const task: TaskEntityWithoutId = {
       name: "Meditation",
       user: { id: "fake-id" },
+      checks: [],
     }
 
     await di.TasksRepository.create(task)
@@ -36,6 +37,7 @@ describe("tasks tests suite", () => {
     const task: TaskEntity = {
       id: "test",
       name: "Cooking",
+      checks: [],
       user: { id: "john-doe" },
     }
 
@@ -58,6 +60,7 @@ describe("tasks tests suite", () => {
     const task: TaskEntity = {
       id: "test",
       name: "Cooking",
+      checks: [],
       user: { id: user?.id as UserEntity["id"] },
     }
 

@@ -1,7 +1,8 @@
-import { Link } from "gatsby"
 import * as React from "react"
+import { useIntl } from "react-intl"
 import { Drawer } from "../Drawer/Drawer"
 import SvgMenu from "../Icons/outline/Menu"
+import { IntlLink } from "../IntlLink/IntlLink"
 import { Timeline } from "../Timeline/Timeline"
 import { connector, ContainerProps } from "./containers/Navbar.container"
 
@@ -15,16 +16,16 @@ export const Wrapper: React.FC<{
         <div className="flex items-center justify-between py-4">
           <div className="flex justify-start">
             {/* TODO add localization */}
-            <Link to="/app/tasks/">
+            <IntlLink to="/app/">
               <span className="sr-only">Journee</span>
               <img className="w-auto h-9" src="/logo/logo.svg" alt="" />
-            </Link>
+            </IntlLink>
           </div>
           <div className="-my-2 -mr-2">
             <button
               type="button"
               onClick={() => props.onOpen()}
-              className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               aria-expanded="false"
             >
               <span className="sr-only">Open menu</span>

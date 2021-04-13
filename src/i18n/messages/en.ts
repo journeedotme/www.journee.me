@@ -36,6 +36,10 @@ const en = {
   "modal.rename-task.input.label": "Task",
   "modal.rename-task.input.placeholder": "Waking up at 8am...",
   "modal.rename-task.submit": "Submit",
+
+  "signin.seo.title": "Signin | Journee",
+  "signin.seo.description": "Signin to be able to use Journee for free",
+  "signin.title": "Sign in and <b>Track your routine</b>",
 }
 
 export default en

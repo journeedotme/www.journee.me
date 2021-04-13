@@ -8,6 +8,7 @@ import { diReducer } from "./di/reducers"
 import { modalReducer } from "./modal/reducers"
 import { tasksReducer } from "./tasks/reducers"
 import { DiInjectable } from "./di/types"
+import { localeReducer } from "./locale/reducers"
 
 const enhancer = composeWithDevTools(applyMiddleware(thunk))
 
@@ -16,6 +17,7 @@ export const reducers = combineReducers({
   di: diReducer,
   modal: modalReducer,
   tasks: tasksReducer,
+  locale: localeReducer,
 })
 
 export type RootState = ReturnType<typeof reducers>

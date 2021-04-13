@@ -1,12 +1,12 @@
 import * as React from "react"
 import { useIntl } from "react-intl"
-import { Link, PageProps } from "gatsby"
 
 import { Seo } from "../../components/Seo/Seo"
 import metadata from "../../configuration/metadata.json"
 import { FormattedMessage } from "../../components/FormattedMessage/FormattedMessage"
 import SvgChevronRight from "../../components/Icons/solid/ChevronRight"
 import { GoogleAuthenticationButton } from "../../components/GoogleAuthenticationButton/GoogleAuthenticationButton"
+import { IntlLink } from "../../components/IntlLink/IntlLink"
 
 const Home: React.FC<{
   location: { pathname: string }
@@ -35,14 +35,14 @@ const Home: React.FC<{
               >
                 <div className="flex items-center flex-1">
                   <div className="flex items-center justify-between w-auto w-full">
-                    <Link to="/app/tasks/">
+                    <IntlLink to="/app/">
                       <span className="sr-only">{metadata.name}</span>
                       <img
                         className="w-auto h-10 sm:h-12"
                         src="/logo/logo.svg"
                         alt=""
                       />
-                    </Link>
+                    </IntlLink>
                   </div>
                 </div>
               </nav>

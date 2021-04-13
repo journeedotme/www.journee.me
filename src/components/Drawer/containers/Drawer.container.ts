@@ -12,9 +12,6 @@ const mapDispatch = (dispatch: ThunkDispatch<RootState, any, any>) => ({
   onClose: () => window?.history.back(),
   onLogout: () => {
     dispatch(actions.auth.$logout())
-
-    //TODO do it in redux
-    window?.history.back()
   },
 })
 

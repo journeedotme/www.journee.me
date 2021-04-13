@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router"
 import { connector, ContainerProps } from "./containers/Drawer.container"
 import { UserEntity } from "../../entities/UserEntity"
 import X from "../Icons/outline/X"
-import { Link } from "gatsby"
+import { IntlLink } from "../IntlLink/IntlLink"
 
 export type DrawerProps = {
   onClose: () => void
@@ -46,7 +46,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
                 <button
                   onClick={props.onClose}
                   type="button"
-                  className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                 >
                   <span className="sr-only">Close menu</span>
                   <X className="w-6 h-6" />
@@ -55,22 +55,22 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <Link
+                <IntlLink
                   to="/"
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Home
                   </span>
-                </Link>
-                <Link
-                  to="/app/tasks/"
+                </IntlLink>
+                <IntlLink
+                  to="/app/"
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
                     My Daily Routine
                   </span>
-                </Link>
+                </IntlLink>
               </nav>
             </div>
           </div>
@@ -93,14 +93,11 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
               </div>
             </div>
             <div className="px-3">
-              <a
-                href="#"
-                className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
-              >
-                <span className="ml-3 text-base font-medium text-gray-900">
+              <div onClick={props.onLogout} className="flex items-center w-full py-3 -m-3 rounded-md hover:bg-gray-50">
+                <span className="w-full ml-3 text-base font-medium text-gray-900">
                   Sign out
                 </span>
-              </a>
+              </div>
             </div>
           </div>
         </div>

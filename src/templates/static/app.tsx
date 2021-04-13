@@ -2,15 +2,22 @@ import React from "react"
 import { Router } from "@reach/router"
 import { PageProps } from "gatsby"
 import { TasksRoute } from "../app/tasks"
+import { Protected } from "../../components/Protected/Protected"
+import { getUrl } from "../../configuration/getTranslations"
+import { App } from "../../components/App/App"
 
-const App: React.FC<PageProps<any, { langKey: string }>> = props => (
-  <Router basepath="/app/">
-    <TasksRoute
-      path="/tasks/"
-      pathname={props.location.pathname}
-      langKey={props.pageContext.langKey}
-    />
-  </Router>
+const Application: React.FC<PageProps<any, { langKey: string }>> = props => (
+  <App lang={props.pageContext.langKey}>
+    <Router basepath={getUrl("/app/", props.pageContext.langKey).url}>
+      <Protected path="/">
+        <TasksRoute
+          path="/"
+          pathname={props.location.pathname}
+          langKey={props.pageContext.langKey}
+        />
+      </Protected>
+    </Router>
+  </App>
 )
 
-export default App
+export default Application
