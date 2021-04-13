@@ -12,6 +12,6 @@ describe("modal tests suite", () => {
 
     state = store.getState()
 
-    expect(state.modal.open).toEqual("add-task")
+    expect(state.modal.open?.type).toEqual("add-task")
   })
 })
