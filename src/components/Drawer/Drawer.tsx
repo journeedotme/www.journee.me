@@ -5,6 +5,7 @@ import { connector, ContainerProps } from "./containers/Drawer.container"
 import { UserEntity } from "../../entities/UserEntity"
 import X from "../Icons/outline/X"
 import { IntlLink } from "../IntlLink/IntlLink"
+import { FormattedMessage } from "../FormattedMessage/FormattedMessage"
 
 export type DrawerProps = {
   onClose: () => void
@@ -60,7 +61,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
-                    Home
+                    <FormattedMessage id="drawer.home" />
                   </span>
                 </IntlLink>
                 <IntlLink
@@ -68,7 +69,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
-                    My Daily Routine
+                    <FormattedMessage id="drawer.tasks" />
                   </span>
                 </IntlLink>
               </nav>
@@ -93,9 +94,12 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
               </div>
             </div>
             <div className="px-3">
-              <div onClick={props.onLogout} className="flex items-center w-full py-3 -m-3 rounded-md hover:bg-gray-50">
+              <div
+                onClick={props.onLogout}
+                className="flex items-center w-full py-3 -m-3 rounded-md hover:bg-gray-50"
+              >
                 <span className="w-full ml-3 text-base font-medium text-gray-900">
-                  Sign out
+                  <FormattedMessage id="drawer.signout" />
                 </span>
               </div>
             </div>

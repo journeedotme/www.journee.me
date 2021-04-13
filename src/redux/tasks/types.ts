@@ -1,10 +1,28 @@
-import { TaskEntity } from "../../entities/TaskEntity"
+import { CheckEntity, TaskEntity } from "../../entities/TaskEntity"
 
 export const store = "REDUX_TASKS_STORE"
 export interface storeAction {
   type: typeof store
   payload: {
     tasks: TaskEntity[]
+  }
+}
+
+export const done = "REDUX_TASKS_DONE"
+export interface doneAction {
+  type: typeof done
+  payload: {
+    task: { id: TaskEntity["id"] }
+    id: CheckEntity["id"]
+  }
+}
+
+export const undone = "REDUX_TASKS_UNDONE"
+export interface undoneAction {
+  type: typeof undone
+  payload: {
+    task: { id: TaskEntity["id"] }
+    id: CheckEntity["id"]
   }
 }
 
@@ -37,3 +55,5 @@ export type TasksActionTypes =
   | addAction
   | renameAction
   | removeAction
+  | doneAction
+  | undoneAction

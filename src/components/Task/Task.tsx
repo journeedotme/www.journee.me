@@ -1,23 +1,10 @@
 import { Transition } from "@headlessui/react"
 import * as React from "react"
 import { TaskEntity } from "../../entities/TaskEntity"
-import Check from "../Icons/outline/Check"
+import { createDailyInterval } from "../../utils/date"
 import DotsVertical from "../Icons/outline/DotsVertical"
+import { Check } from "./components/Check/Check"
 import { connector, ContainerProps } from "./containers/Task.container"
-
-const Item: React.FC<{
-  active?: boolean
-}> = props => (
-  <div
-    className={`mx-auto text-center border-2 border-gray-200 rounded-full h-8 w-8 text-white ${
-      props.active
-        ? "bg-blue-400 border-blue-400 text-white"
-        : "bg-transparent text-gray-600"
-    }`}
-  >
-    {props.active && <Check />}
-  </div>
-)
 
 export const Wrapper: React.FC<{
   onActions: () => void
@@ -43,13 +30,9 @@ export const Wrapper: React.FC<{
               </button>
             </div>
             <div className="grid grid-cols-7 px-2 mx-auto mt-2">
-              <Item />
-              <Item />
-              <Item active />
-              <Item />
-              <Item />
-              <Item />
-              <Item />
+              {createDailyInterval(7).map(date => (
+                <Check id={date} task={props.task.id} key={date} />
+              ))}
             </div>
           </div>
         </div>

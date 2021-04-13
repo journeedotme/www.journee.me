@@ -8,9 +8,12 @@ export const Wrapper: React.FC<{ onClick: () => void }> = props => {
       <button
         onClick={props.onClick}
         type="button"
-        className="inline-flex items-center p-2 text-white border border-transparent rounded-full shadow-md bg-gradient-to-t from-blue-500 to-blue-400 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        className="inline-flex items-center p-2 text-white rounded-full shadow-md bg-gradient-to-t from-blue-500 to-blue-400 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
       >
-        <Plus className="w-8 h-8" />
+        <Plus
+          className="w-8 h-8"
+          style={{ filter: "drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.10))" }}
+        />
       </button>
     </div>
   )

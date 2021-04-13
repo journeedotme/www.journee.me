@@ -15,6 +15,8 @@ const fr: typeof en = {
   "tasks.seo.title": "Vos tâches quotidiennes | Journee",
   "tasks.seo.description":
     "Créez, renommez et remplissez vos tâches de la journée avec Journee",
+  "tasks.motivation":
+    "Restez motivé ! <b>Pourquoi ne pas ajouter des tâches ?</b>",
 
   "modal.actions.rename": "Renommer",
   "modal.actions.remove": "Supprimer",
@@ -43,6 +45,10 @@ const fr: typeof en = {
   "signin.seo.title": "Se connecter | Journee",
   "signin.seo.description": "Connectez vous pour utiliser Journee gratuitement",
   "signin.title": "Connectez vous et <b>Suivez vos tâches quotidiennes</b>",
+
+  "drawer.home": "Accueil",
+  "drawer.tasks": "Mes tâches",
+  "drawer.signout": "Se déconnecter",
 }
 
 export default fr

@@ -1,12 +1,44 @@
-import { TaskEntity, TaskEntityWithoutId } from "../entities/TaskEntity"
 import {
+  CheckEntity,
+  TaskEntity,
+  TaskEntityWithoutId,
+} from "../entities/TaskEntity"
+import {
+  DoneResponse,
   ITasksRepository,
   RemoveResponse,
   RenameResponse,
+  UndoneResponse,
 } from "../interfaces/ITasksRepository"
 
 export class InMemoryTasksRepository implements ITasksRepository {
   private tasks: Map<TaskEntity["id"], TaskEntity> = new Map()
+
+  async done(params: {
+    task: { id: TaskEntity["id"] }
+    id: CheckEntity["id"]
+  }): Promise<DoneResponse> {
+    const task = this.tasks.get(params.task.id)
+
+    task?.checks.set(params.id, { id: params.id, task: params.id })
+
+    if (!task) return { status: 500, error: "tasks/not-exists" }
+
+    return { status: 200, error: null }
+  }
+
+  async undone(params: {
+    task: { id: TaskEntity["id"] }
+    id: CheckEntity["id"]
+  }): Promise<UndoneResponse> {
+    const task = this.tasks.get(params.task.id)
+
+    task?.checks.delete(params.id)
+
+    if (!task) return { status: 500, error: "tasks/not-exists" }
+
+    return { status: 200, error: null }
+  }
 
   async create(task: TaskEntityWithoutId): Promise<{ task: TaskEntity }> {
     const id = (Math.random() * Date.now()).toString()

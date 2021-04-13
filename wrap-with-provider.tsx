@@ -27,6 +27,7 @@ export default ({ element }) => {
     id: "demo",
     name: "Meditation",
     user: { id: "demo" },
+    checks: new Map(),
   })
 
   const { store } = init({}, [

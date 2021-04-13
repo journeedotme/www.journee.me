@@ -10,7 +10,7 @@ describe("tasks tests suite", () => {
     const task: TaskEntityWithoutId = {
       name: "Meditation",
       user: { id: "fake-id" },
-      checks: [],
+      checks: new Map(),
     }
 
     await di.TasksRepository.create(task)
@@ -37,7 +37,7 @@ describe("tasks tests suite", () => {
     const task: TaskEntity = {
       id: "test",
       name: "Cooking",
-      checks: [],
+      checks: new Map(),
       user: { id: "john-doe" },
     }
 
@@ -60,7 +60,7 @@ describe("tasks tests suite", () => {
     const task: TaskEntity = {
       id: "test",
       name: "Cooking",
-      checks: [],
+      checks: new Map(),
       user: { id: user?.id as UserEntity["id"] },
     }
 
@@ -148,5 +148,68 @@ describe("tasks tests suite", () => {
     state = store.getState()
 
     expect(state.tasks.tasks).toHaveLength(0)
+  })
+
+  it("as a logged in user, i should be able to mark a check as done", async () => {
+    const { store, actions, di } = createStoreForTests()
+
+    await di.AuthRepository.register({ ...USERS.base })
+
+    await store.dispatch<any>(actions.auth.$authenticateWithGoogle())
+
+    let state = store.getState()
+
+    expect(state.auth.authenticated).toEqual(true)
+    expect(state.tasks.tasks).toEqual([])
+
+    await store.dispatch<any>(actions.tasks.$create({ name: "Meditation" }))
+
+    state = store.getState()
+
+    await store.dispatch<any>(
+      actions.tasks.$toggle({
+        task: { id: state.tasks.tasks[0].id },
+        id: "2021-01-04",
+      })
+    )
+
+    state = store.getState()
+
+    expect(state.tasks.tasks[0].checks.size).toEqual(1)
+  })
+
+  it("as a logged in user, i should be able to mark a check as undone", async () => {
+    const { store, actions, di } = createStoreForTests()
+
+    await di.AuthRepository.register({ ...USERS.base })
+
+    await store.dispatch<any>(actions.auth.$authenticateWithGoogle())
+
+    let state = store.getState()
+
+    expect(state.auth.authenticated).toEqual(true)
+    expect(state.tasks.tasks).toEqual([])
+
+    await store.dispatch<any>(actions.tasks.$create({ name: "Meditation" }))
+
+    state = store.getState()
+
+    await store.dispatch<any>(
+      actions.tasks.$toggle({
+        task: { id: state.tasks.tasks[0].id },
+        id: "2021-01-04",
+      })
+    )
+
+    await store.dispatch<any>(
+      actions.tasks.$toggle({
+        task: { id: state.tasks.tasks[0].id },
+        id: "2021-01-04",
+      })
+    )
+
+    state = store.getState()
+
+    expect(state.tasks.tasks[0].checks.size).toEqual(0)
   })
 })

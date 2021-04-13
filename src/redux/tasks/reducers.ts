@@ -43,5 +43,40 @@ export function tasksReducer(
     }
   }
 
+  if (action.type === types.done) {
+    return {
+      ...state,
+      tasks: state.tasks.map(task => {
+        if (task.id !== action.payload.task.id) return task
+        const checks = [
+          ...Array.from(task.checks.values()),
+          { id: action.payload.id, task: task.id },
+        ]
+
+        return {
+          ...task,
+          checks: new Map(checks.map(check => [check.id, check])),
+        }
+      }),
+    }
+  }
+
+  if (action.type === types.undone) {
+    return {
+      ...state,
+      tasks: state.tasks.map(task => {
+        if (task.id !== action.payload.task.id) return task
+        const checks = Array.from(task.checks.values()).filter(({ id }) => {
+          return id !== action.payload.id
+        })
+
+        return {
+          ...task,
+          checks: new Map(checks.map(check => [check.id, check])),
+        }
+      }),
+    }
+  }
+
   return state
 }

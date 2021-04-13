@@ -9,7 +9,7 @@ const Item: React.FC<{
   <div
     className={`text-center px-2 py-2 ${
       props.active
-        ? "bg-gradient-to-b from-blue-400 to-blue-500 rounded-lg shadow-lg"
+        ? "bg-gradient-to-b from-blue-400 to-blue-500 rounded-lg shadow-xl"
         : ""
     }`}
   >

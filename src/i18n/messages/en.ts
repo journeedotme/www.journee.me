@@ -12,6 +12,8 @@ const en = {
 
   "tasks.seo.title": "Your daily tasks | Journee",
   "tasks.seo.description": "Create, update and set tasks as done with Journee",
+  "tasks.motivation":
+    "Keep motivation ! <b>And add new task in your daily routine.</b>",
 
   "modal.actions.rename": "Rename",
   "modal.actions.remove": "Remove",
@@ -40,6 +42,10 @@ const en = {
   "signin.seo.title": "Signin | Journee",
   "signin.seo.description": "Signin to be able to use Journee for free",
   "signin.title": "Sign in and <b>Track your routine</b>",
+
+  "drawer.home": "Home",
+  "drawer.tasks": "My daily routine",
+  "drawer.signout": "Sign out",
 }
 
 export default en

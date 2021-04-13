@@ -2,12 +2,30 @@ import { ThunkAction } from "redux-thunk"
 import * as types from "./types"
 import { fetching, fetchEnd, logout } from "../auth/types"
 import { RootState } from "../store"
-import { TaskEntity, TaskEntityWithoutId } from "../../entities/TaskEntity"
+import {
+  CheckEntity,
+  TaskEntity,
+  TaskEntityWithoutId,
+} from "../../entities/TaskEntity"
 
 export const store = (
   payload: types.storeAction["payload"]
 ): types.TasksActionTypes => ({
   type: types.store,
+  payload,
+})
+
+export const done = (
+  payload: types.doneAction["payload"]
+): types.TasksActionTypes => ({
+  type: types.done,
+  payload,
+})
+
+export const undone = (
+  payload: types.undoneAction["payload"]
+): types.TasksActionTypes => ({
+  type: types.undone,
   payload,
 })
 
@@ -55,6 +73,7 @@ export const $create = (params: {
   const { task } = await di.TasksRepository.create({
     name: params.name,
     user: { id: auth.user.id },
+    checks: new Map(),
   })
 
   dispatcher(add({ task }))
@@ -88,4 +107,42 @@ export const $remove = (params: {
   })
 
   if (response.status === 200) dispatcher(remove({ id: params.id }))
+}
+
+export const $done = (params: {
+  task: { id: TaskEntity["id"] }
+  id: CheckEntity["id"]
+}): ThunkAction<any, RootState, any, any> => async (dispatcher, getState) => {
+  const { di, auth } = getState()
+
+  if (!auth.authenticated || !auth.user) return
+
+  await di.TasksRepository.done(params)
+
+  dispatcher(done(params))
+}
+
+export const $undone = (params: {
+  task: { id: TaskEntity["id"] }
+  id: CheckEntity["id"]
+}): ThunkAction<any, RootState, any, any> => async (dispatcher, getState) => {
+  const { di, auth } = getState()
+
+  if (!auth.authenticated || !auth.user) return
+
+  await di.TasksRepository.undone(params)
+
+  dispatcher(undone(params))
+}
+
+export const $toggle = (props: {
+  id: CheckEntity["id"]
+  task: { id: TaskEntity["id"] }
+}): ThunkAction<any, RootState, any, any> => async (dispatcher, getState) => {
+  const { di, tasks } = getState()
+
+  const task = tasks.tasks.find(({ id }) => id === props.task.id)
+
+  if (task?.checks?.has(props.id)) return dispatcher($undone(props))
+  return dispatcher($done(props))
 }
