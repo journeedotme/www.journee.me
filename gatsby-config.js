@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [],
+        exclude: ["/app/*"],
         sitemapSize: 5000,
       },
     },

@@ -8,13 +8,7 @@ interface AuthState {
 }
 
 const initialState: AuthState = {
-  user: {
-    email: "demo@journee.me",
-    firstName: "John",
-    lastName: "Doe",
-    username: "John Doe",
-    id: "demo",
-  },
+  user: null,
   authenticated: true,
   fetching: false,
 }

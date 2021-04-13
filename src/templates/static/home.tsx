@@ -35,7 +35,7 @@ const Home: React.FC<{
               >
                 <div className="flex items-center flex-1">
                   <div className="flex items-center justify-between w-auto w-full">
-                    <Link to="/">
+                    <Link to="/app/tasks/">
                       <span className="sr-only">{metadata.name}</span>
                       <img
                         className="w-auto h-10 sm:h-12"

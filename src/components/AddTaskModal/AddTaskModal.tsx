@@ -1,4 +1,3 @@
-import { Transition } from "@headlessui/react"
 import * as React from "react"
 import { useIntl } from "react-intl"
 import { BaseModal } from "../BaseModal/BaseModal"
@@ -9,8 +8,16 @@ import { connector, ContainerProps } from "./containers/AddTaskModal.container"
 export const Wrapper: React.FC<{
   isOpen: boolean
   onClose: () => void
+  onSubmit: (params: { name: string }) => void
 }> = props => {
   const intl = useIntl()
+  const [name, setName] = React.useState("")
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    props.onSubmit({ name })
+    setName("")
+  }
 
   return (
     <BaseModal isOpen={props.isOpen} onClose={props.onClose}>
@@ -30,33 +37,36 @@ export const Wrapper: React.FC<{
             </div>
           </div>
         </div>
-        <div className="mt-5">
-          <div>
-            <label htmlFor="task" className="sr-only">
-              <FormattedMessage id="modal.add-task.input.label" />
-            </label>
-            <input
-              type="text"
-              name="task"
-              id="task"
-              autoFocus
-              value=""
-              readOnly
-              className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              placeholder={intl.formatMessage({
-                id: "modal.add-task.input.placeholder",
-              })}
-            />
+        <form onSubmit={onSubmit}>
+          <div className="mt-5">
+            <div>
+              <label htmlFor="task" className="sr-only">
+                <FormattedMessage id="modal.add-task.input.label" />
+              </label>
+              <input
+                type="text"
+                name="task"
+                id="task"
+                required
+                autoFocus
+                value={name}
+                onChange={e => setName(e.target.value)}
+                className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                placeholder={intl.formatMessage({
+                  id: "modal.add-task.input.placeholder",
+                })}
+              />
+            </div>
           </div>
-        </div>
-        <div className="mt-5">
-          <button
-            type="button"
-            className="inline-flex justify-center w-full px-4 py-2 text-base text-white rounded-md shadow-md bg-gradient-to-t from-blue-500 to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            <FormattedMessage id="modal.add-task.submit" />
-          </button>
-        </div>
+          <div className="mt-5">
+            <button
+              type="submit"
+              className="inline-flex justify-center w-full px-4 py-2 text-base text-white rounded-md shadow-md bg-gradient-to-t from-blue-500 to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              <FormattedMessage id="modal.add-task.submit" />
+            </button>
+          </div>
+        </form>
       </div>
     </BaseModal>
   )

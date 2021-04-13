@@ -1,18 +1,17 @@
 import { connect, ConnectedProps } from "react-redux"
+import { TaskEntity } from "../../../entities/TaskEntity"
 import { actions } from "../../../redux/actions"
 import { RootState } from "../../../redux/store"
 
-const mapState = (state: RootState, props) => {
-  return {
-    isOpen: state.modal.open?.type === "add-task",
-  }
-}
+const mapState = (state: RootState) => ({
+  tasks: state.tasks.tasks,
+})
 
 const mapDispatch = (dispatch: any) => ({
-  onClose: () => dispatch(actions.modal.close()),
-  onSubmit: (params: { name: string }) => {
-    dispatch(actions.tasks.$create(params))
-    dispatch(actions.modal.close())
+  onMount: async () => {
+    // TODO remove authenticate here
+    await dispatch(actions.auth.$authenticateWithGoogle())
+    await dispatch(actions.tasks.$findAll())
   },
 })
 

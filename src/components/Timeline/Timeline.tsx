@@ -38,11 +38,11 @@ export const Wrapper: React.FC = props => {
           <div className="grid grid-cols-7">
             <Item numeric={8} day={"Mon"} />
             <Item numeric={9} day={"Tue"} />
-            <Item numeric={10} day={"Wed"} active />
+            <Item numeric={10} day={"Wed"} />
             <Item numeric={11} day={"Thu"} />
             <Item numeric={12} day={"Fri"} />
             <Item numeric={13} day={"Sat"} />
-            <Item numeric={14} day={"Sun"} />
+            <Item numeric={14} day={"Sun"} active />
           </div>
         </div>
       </div>

@@ -18,10 +18,24 @@ const en = {
   "modal.actions.cancel": "Cancel",
 
   "modal.add-task.title": "Create a new task",
-  "modal.add-task.description": "Fill the input with the name of the task. You will be able to change the name later.",
+  "modal.add-task.description":
+    "Fill the input with the name of the task. You will be able to change the name later.",
   "modal.add-task.submit": "Submit",
   "modal.add-task.input.label": "Task",
   "modal.add-task.input.placeholder": "Waking up at 8am...",
+
+  "modal.remove-task.title": "Remove task",
+  "modal.remove-task.description":
+    "Are you sure you want to remove the task? All of your data will be permanently removed. This action cannot be undone.",
+  "modal.remove-task.submit": "Yes ! Remove permanently !",
+  "modal.remove-task.cancel": "Oh no ! Cancel now !",
+
+  "modal.rename-task.title": "Rename a task",
+  "modal.rename-task.description":
+    "Fill the input with the name of the task. You will be able to change the name later.",
+  "modal.rename-task.input.label": "Task",
+  "modal.rename-task.input.placeholder": "Waking up at 8am...",
+  "modal.rename-task.submit": "Submit",
 }
 
 export default en

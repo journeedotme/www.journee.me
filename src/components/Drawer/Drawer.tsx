@@ -4,6 +4,7 @@ import { useLocation } from "@reach/router"
 import { connector, ContainerProps } from "./containers/Drawer.container"
 import { UserEntity } from "../../entities/UserEntity"
 import X from "../Icons/outline/X"
+import { Link } from "gatsby"
 
 export type DrawerProps = {
   onClose: () => void
@@ -54,22 +55,22 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Home
                   </span>
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/app/tasks/"
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
                     My Daily Routine
                   </span>
-                </a>
+                </Link>
               </nav>
             </div>
           </div>

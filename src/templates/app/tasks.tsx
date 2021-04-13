@@ -3,17 +3,16 @@ import { useIntl } from "react-intl"
 import { RouteComponentProps } from "@reach/router"
 import { Seo } from "../../components/Seo/Seo"
 import { Navbar } from "../../components/Navbar/Navbar"
-import { Task } from "../../components/Task/Task"
-// TODO SVG shit
-import Arrow from "../../assets/tasks/arrow.svg"
 import { AddTaskButton } from "../../components/AddTaskButton/AddTaskButton"
 import { AddTaskModal } from "../../components/AddTaskModal/AddTaskModal"
 import { RenameTaskModal } from "../../components/RenameTaskModal/RenameTaskModal"
 import { RemoveTaskModal } from "../../components/RemoveTaskModal/RemoveTaskModal"
 import { ActionsTaskModal } from "../../components/ActionsTaskModal/ActionsTaskModal"
 import { ModalOverlay } from "../../components/ModalOverlay/ModalOverlay"
+import { Tasks } from "../../components/Tasks/Tasks"
+import { MotivationMessages } from "../../components/MotivationMessages/MotivationMessages"
 
-export const Tasks: React.FC<
+export const TasksRoute: React.FC<
   {
     pathname: string
     langKey: string
@@ -35,16 +34,10 @@ export const Tasks: React.FC<
       <div className="relative min-h-screen bg-gray-50">
         <Navbar withTimeline />
         <div className="pt-2 space-y-2">
-          <Task id="1" />
+          <Tasks />
         </div>
         <div className="py-8">
-          <div className="w-full pb-8 text-2xl font-bold text-center">
-            <div className="leading-7 text-gray-700">Keep motivation !</div>
-            <div className="leading-8 text-blue-400">
-              And add new task in your daily routine.
-            </div>
-          </div>
-          <img src={Arrow} className="m-auto"></img>
+          <MotivationMessages />
         </div>
       </div>
 

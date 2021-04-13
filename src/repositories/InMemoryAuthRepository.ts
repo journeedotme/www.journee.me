@@ -31,8 +31,8 @@ export class InMemoryAuthRepository implements IAuthRepository {
       }
 
     const entity: UserEntity = {
-      ...user,
       id: String(Math.random()),
+      ...user,
     }
 
     this.users.set(entity.id, entity)
