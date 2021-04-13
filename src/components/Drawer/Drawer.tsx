@@ -80,7 +80,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
               <div className="flex-shrink-0">
                 <img
                   className="w-10 h-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixqx=dAdD8ntwdB&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
                   alt=""
                 />
               </div>
