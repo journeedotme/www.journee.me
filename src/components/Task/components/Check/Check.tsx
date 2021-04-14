@@ -8,7 +8,7 @@ export const Wrapper: React.FC<{
   onClick: () => void
 }> = props => {
   return (
-    <div
+    <button
       onClick={props.onClick}
       className={`mx-auto text-center border-2 border-gray-200 rounded-full h-8 w-8 text-white ${
         props.active
@@ -21,7 +21,7 @@ export const Wrapper: React.FC<{
           style={{ filter: "drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.10))" }}
         />
       )}
-    </div>
+    </button>
   )
 }
 

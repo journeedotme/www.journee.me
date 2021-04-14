@@ -29,7 +29,7 @@ export const Wrapper: React.FC<{
                 <DotsVertical className="w-6 h-6 text-gray-400" />
               </button>
             </div>
-            <div className="grid grid-cols-7 px-2 mx-auto mt-2">
+            <div className="grid grid-cols-7 px-2 mx-auto mt-2 max-w-7xl">
               {createDailyInterval(7).map(date => (
                 <Check id={date} task={props.task.id} key={date} />
               ))}
