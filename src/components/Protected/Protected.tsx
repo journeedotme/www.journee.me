@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import Logo from "../../../static/logo/logo.svg"
 import { connector, ContainerProps } from "./containers/Protected.container"
 
 export const Wrapper: React.FC<{
@@ -13,7 +13,7 @@ export const Wrapper: React.FC<{
   return (
     <>
       <div className="flex items-center justify-center h-screen bg-gray-100">
-        <img src="/logo/logo.svg" className="w-20 h-auto animate-pulse" />
+        <img src={Logo} alt="Journee" className="w-20 h-auto animate-pulse" />
       </div>
     </>
   )

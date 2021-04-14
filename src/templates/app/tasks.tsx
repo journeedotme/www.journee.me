@@ -31,8 +31,9 @@ export const TasksRoute: React.FC<
         canonical={"/tasks/"}
       />
 
-      <div className="relative min-h-screen bg-gray-50">
+      <div className="relative min-h-screen pb-10 bg-gray-50">
         <Navbar withTimeline />
+        <Navbar withTimeline sticky />
         <div className="pt-2 space-y-2">
           <Tasks />
         </div>

@@ -3,7 +3,7 @@ import { useIntl } from "react-intl"
 import { Seo } from "../../components/Seo/Seo"
 import { GoogleAuthenticationButton } from "../../components/GoogleAuthenticationButton/GoogleAuthenticationButton"
 import { X } from "../../components/Icons/outline"
-
+import Logo from "../../../static/logo/logo.svg"
 import { FormattedMessage } from "../../components/FormattedMessage/FormattedMessage"
 import { IntlLink } from "../../components/IntlLink/IntlLink"
 
@@ -35,7 +35,7 @@ const SigninRoute: React.FC<{
           <div>
             <img
               className="w-auto h-12 mx-auto"
-              src="/logo/logo.svg"
+              src={Logo}
               alt="Journee"
             />
             <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-800">

@@ -2,9 +2,13 @@ import { connect, ConnectedProps } from "react-redux"
 import { actions } from "../../../redux/actions"
 import { RootState } from "../../../redux/store"
 
-const mapState = (state: RootState, props: { withTimeline?: boolean }) => {
+const mapState = (
+  state: RootState,
+  props: { withTimeline?: boolean; sticky?: boolean }
+) => {
   return {
     withTimeline: props.withTimeline,
+    sticky: props.sticky,
   }
 }
 

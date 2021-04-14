@@ -1,24 +1,28 @@
 import * as React from "react"
-import { useIntl } from "react-intl"
 import { Drawer } from "../Drawer/Drawer"
 import SvgMenu from "../Icons/outline/Menu"
 import { IntlLink } from "../IntlLink/IntlLink"
 import { Timeline } from "../Timeline/Timeline"
+import Logo from "../../../static/logo/logo.svg"
 import { connector, ContainerProps } from "./containers/Navbar.container"
 
 export const Wrapper: React.FC<{
   onOpen: () => void
   withTimeline?: boolean
+  sticky?: boolean
 }> = props => {
   return (
-    <div className="relative z-10 bg-white shadow-sm">
+    <div
+      className={`${
+        props.sticky ? "fixed" : "relative opacity-0"
+      } top-0 left-0 right-0 z-10 w-full bg-white shadow-sm sticked`}
+    >
       <div className="px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between py-4">
           <div className="flex justify-start">
-            {/* TODO add localization */}
             <IntlLink to="/app/">
               <span className="sr-only">Journee</span>
-              <img className="w-auto h-9" src="/logo/logo.svg" alt="" />
+              <img className="w-auto h-9" src={Logo} alt="Journee" />
             </IntlLink>
           </div>
           <div className="-my-2 -mr-2">
@@ -37,7 +41,7 @@ export const Wrapper: React.FC<{
 
       {props.withTimeline && <Timeline />}
 
-      <Drawer />
+      {props.sticky && <Drawer />}
     </div>
   )
 }

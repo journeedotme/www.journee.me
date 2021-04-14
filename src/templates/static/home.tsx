@@ -7,6 +7,7 @@ import { FormattedMessage } from "../../components/FormattedMessage/FormattedMes
 import SvgChevronRight from "../../components/Icons/solid/ChevronRight"
 import { GoogleAuthenticationButton } from "../../components/GoogleAuthenticationButton/GoogleAuthenticationButton"
 import { IntlLink } from "../../components/IntlLink/IntlLink"
+import Logo from "../../../static/logo/logo.svg"
 
 const Home: React.FC<{
   location: { pathname: string }
@@ -39,8 +40,8 @@ const Home: React.FC<{
                       <span className="sr-only">{metadata.name}</span>
                       <img
                         className="w-auto h-10 sm:h-12"
-                        src="/logo/logo.svg"
-                        alt=""
+                        src={Logo}
+                        alt="Journee"
                       />
                     </IntlLink>
                   </div>

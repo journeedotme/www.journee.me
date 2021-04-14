@@ -1,9 +1,10 @@
 import * as React from "react"
+import { createDailyIntervalWithDayNumberAndName } from "../../utils/date"
 import { connector, ContainerProps } from "./containers/Timeline.container"
 
 const Item: React.FC<{
   active?: boolean
-  numeric: number
+  numeric: string
   day: string
 }> = props => (
   <div
@@ -36,13 +37,11 @@ export const Wrapper: React.FC = props => {
       <div className="px-2 py-2 mx-auto max-w-7xl">
         <div className="w-full bg-gray-100 rounded">
           <div className="grid grid-cols-7">
-            <Item numeric={8} day={"Mon"} />
-            <Item numeric={9} day={"Tue"} />
-            <Item numeric={10} day={"Wed"} />
-            <Item numeric={11} day={"Thu"} />
-            <Item numeric={12} day={"Fri"} />
-            <Item numeric={13} day={"Sat"} />
-            <Item numeric={14} day={"Sun"} active />
+            {createDailyIntervalWithDayNumberAndName(7).map(
+              ({ number, day }, index) => (
+                <Item numeric={number} day={day} key={number} active={index === 6} />
+              )
+            )}
           </div>
         </div>
       </div>

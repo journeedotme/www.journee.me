@@ -6,6 +6,7 @@ import { UserEntity } from "../../entities/UserEntity"
 import X from "../Icons/outline/X"
 import { IntlLink } from "../IntlLink/IntlLink"
 import { FormattedMessage } from "../FormattedMessage/FormattedMessage"
+import Logo from "../../../static/logo/logo.svg"
 
 export type DrawerProps = {
   onClose: () => void
@@ -37,11 +38,7 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
           <div className="px-5 pt-5 pb-6">
             <div className="flex items-center justify-between">
               <div>
-                <img
-                  className="w-auto h-9"
-                  src="/logo/logo.svg"
-                  alt="Workflow"
-                />
+                <img className="w-auto h-9" src={Logo} alt="Journee" />
               </div>
               <div className="-mr-2">
                 <button
