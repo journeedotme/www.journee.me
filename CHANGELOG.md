@@ -1,3 +1,13 @@
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/journeedotme/www.journee.me/compare/v1.5.0...v1.6.0) (2021-04-14)
+
+
+### Features
+
+* **task:** everything is connected with in memory database ([#15](https://github.com/journeedotme/www.journee.me/issues/15)) ([7e56006](https://github.com/journeedotme/www.journee.me/commit/7e56006))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/journeedotme/www.journee.me/compare/v1.4.0...v1.5.0) (2021-04-11)
 
