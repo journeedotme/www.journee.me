@@ -2,6 +2,7 @@ import * as types from "./types"
 import { ThunkAction } from "redux-thunk"
 import { RootState } from "../store"
 import { ErrorEntity } from "../../entities/ErrorEntity"
+import { getUrl } from "../../configuration/getTranslations"
 
 export const authenticate = (
   payload: types.authenticateAction["payload"]
@@ -28,7 +29,7 @@ export const $authenticateWithGoogle = (): ThunkAction<
   any,
   any
 > => async (dispatcher, getState) => {
-  const { di } = getState()
+  const { di, locale } = getState()
 
   dispatcher(fetching())
 
@@ -39,6 +40,8 @@ export const $authenticateWithGoogle = (): ThunkAction<
 
   dispatcher(authenticate({ user: response.user }))
 
+  di.LocationService.navigate(getUrl("/app/", locale.lang).url)
+
   dispatcher(fetchEnd())
 }
 
@@ -48,13 +51,14 @@ export const $isAuthenticated = (): ThunkAction<
   any,
   any
 > => async (dispatcher, getState) => {
-  const { di } = getState()
+  const { di, locale } = getState()
 
   dispatcher(fetching())
 
   return di.AuthRepository.isAuthenticated().then(response => {
     dispatcher(fetchEnd())
-    if (!response.authenticated) return
+    if (!response.authenticated)
+      return di.LocationService.navigate(getUrl("/signin/", locale.lang).url)
     dispatcher(authenticate({ user: response.user }))
     return response
   })
@@ -64,12 +68,13 @@ export const $logout = (): ThunkAction<any, RootState, any, any> => async (
   dispatcher,
   getState
 ) => {
-  const { di } = getState()
+  const { di, locale } = getState()
 
   dispatcher(fetching())
 
+  dispatcher(logout())
   await di.AuthRepository.logout()
+  di.LocationService.navigate(getUrl("/", locale.lang).url)
 
   dispatcher(fetchEnd())
-  dispatcher(logout())
 }

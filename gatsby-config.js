@@ -28,9 +28,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [],
+        exclude: ["/app/*"],
         sitemapSize: 5000,
       },
+    },
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/fr/app/*`, `/app/*`] },
     },
     "gatsby-plugin-postcss",
     // this (optional) plugin enables Progressive Web App + Offline functionality

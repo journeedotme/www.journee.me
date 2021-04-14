@@ -15,4 +15,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { langKey: lang },
     })
   })
+
+  languages.forEach(lang => {
+    createPage({
+      path: lang === defaultLanguage ? "/app/" : `/${lang}/app/`,
+      component: path.resolve(`./src/templates/static/app.tsx`),
+      context: { langKey: lang },
+    })
+  })
+
+  languages.forEach(lang => {
+    createPage({
+      path: lang === defaultLanguage ? "/signin/" : `/${lang}/signin/`,
+      component: path.resolve(`./src/templates/static/signin.tsx`),
+      context: { langKey: lang },
+    })
+  })
 }

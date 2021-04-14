@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`date test suite should return all dates from today 1`] = `
+Array [
+  "2019-12-28",
+  "2019-12-29",
+  "2019-12-30",
+  "2019-12-31",
+  "2020-01-01",
+  "2020-01-02",
+  "2020-01-03",
+]
+`;
+
+exports[`date test suite should return all dates from today with name and number 1`] = `
+Array [
+  Object {
+    "day": "Sat",
+    "number": "28",
+  },
+  Object {
+    "day": "Sun",
+    "number": "29",
+  },
+  Object {
+    "day": "Mon",
+    "number": "30",
+  },
+  Object {
+    "day": "Tue",
+    "number": "31",
+  },
+  Object {
+    "day": "Wed",
+    "number": "1",
+  },
+  Object {
+    "day": "Thu",
+    "number": "2",
+  },
+  Object {
+    "day": "Fri",
+    "number": "3",
+  },
+]
+`;
