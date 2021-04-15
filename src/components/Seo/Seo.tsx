@@ -35,10 +35,21 @@ export const Seo: React.FC<{
   return (
     <Helmet title={props.title} htmlAttributes={{ lang: props.lang }}>
       {getUrls(props.canonical).map(({ lang, url }) => (
-        <link rel="alternate" hrefLang={lang} href={url} key={lang} />
+        <link
+          rel="alternate"
+          hrefLang={lang}
+          href={`${siteMetadata.url}${url === "/" ? "" : url}`}
+          key={lang}
+        />
       ))}
 
-      <link rel="alternate" hrefLang={"x-default"} href={props.canonical} />
+      <link
+        rel="alternate"
+        hrefLang={"x-default"}
+        href={`${siteMetadata.url}${
+          props.canonical === "/" ? "" : props.canonical
+        }`}
+      />
 
       <link rel="icon" href={siteMetadata.favicon} />
 

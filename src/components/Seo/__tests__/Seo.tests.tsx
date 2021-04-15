@@ -18,13 +18,13 @@ describe("<Seo /> test suite", () => {
     await waitFor(() => {
       const head = document.head
       expect(
-        head.querySelector("[hreflang=x-default]").getAttribute("href")
-      ).toEqual("/")
-      expect(head.querySelector("[hreflang=fr]").getAttribute("href")).toEqual(
-        "/fr/"
+        head.querySelector("[hreflang=x-default]")?.getAttribute("href")
+      ).toEqual("https://www.journee.me")
+      expect(head.querySelector("[hreflang=fr]")?.getAttribute("href")).toEqual(
+        "https://www.journee.me/fr/"
       )
-      expect(head.querySelector("[hreflang=en]").getAttribute("href")).toEqual(
-        "/"
+      expect(head.querySelector("[hreflang=en]")?.getAttribute("href")).toEqual(
+        "https://www.journee.me"
       )
     })
   })
@@ -44,13 +44,13 @@ describe("<Seo /> test suite", () => {
     await waitFor(() => {
       const head = document.head
       expect(
-        head.querySelector("[hreflang=x-default]").getAttribute("href")
-      ).toEqual("/contact/")
-      expect(head.querySelector("[hreflang=fr]").getAttribute("href")).toEqual(
-        "/fr/contact/"
+        head.querySelector("[hreflang=x-default]")?.getAttribute("href")
+      ).toEqual("https://www.journee.me/contact/")
+      expect(head.querySelector("[hreflang=fr]")?.getAttribute("href")).toEqual(
+        "https://www.journee.me/fr/contact/"
       )
-      expect(head.querySelector("[hreflang=en]").getAttribute("href")).toEqual(
-        "/contact/"
+      expect(head.querySelector("[hreflang=en]")?.getAttribute("href")).toEqual(
+        "https://www.journee.me/contact/"
       )
     })
   })
@@ -70,7 +70,7 @@ describe("<Seo /> test suite", () => {
     await waitFor(() => {
       const head = document.head
       expect(
-        head.querySelector("[name=robots]").getAttribute("content")
+        head.querySelector("[name=robots]")?.getAttribute("content")
       ).toEqual("noindex")
     })
   })
