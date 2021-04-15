@@ -2,8 +2,7 @@ import * as React from "react"
 import { TaskEntity } from "../../entities/TaskEntity"
 import { BaseModal } from "../BaseModal/BaseModal"
 import { FormattedMessage } from "../FormattedMessage/FormattedMessage"
-import Pencil from "../Icons/outline/Pencil"
-import Trash from "../Icons/outline/Trash"
+import { PencilIcon, TrashIcon } from "@heroicons/react/outline"
 
 import {
   connector,
@@ -39,13 +38,13 @@ export const Wrapper: React.FC<{
       <div className="inline-block w-full max-w-md px-4 pt-5 pb-4 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl">
         <div className="space-y-1" aria-label="Sidebar">
           <Item
-            icon={<Pencil />}
+            icon={<PencilIcon />}
             label={<FormattedMessage id="modal.actions.rename" />}
             onClick={() => props.onRename(props.id)}
           />
 
           <Item
-            icon={<Trash />}
+            icon={<TrashIcon />}
             label={<FormattedMessage id="modal.actions.remove" />}
             onClick={() => props.onRemove(props.id)}
           />

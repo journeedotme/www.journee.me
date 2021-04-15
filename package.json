@@ -17,7 +17,6 @@
     "gatsby": "^3.2.1",
     "gatsby-plugin-amplitude-analytics": "^3.2.0",
     "gatsby-plugin-create-client-paths": "^3.2.0",
-    "gatsby-plugin-gatsby-cloud": "^2.2.0",
     "gatsby-plugin-google-gtag": "^3.3.0",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^1.2.0",
@@ -25,10 +24,8 @@
     "gatsby-plugin-offline": "^4.2.0",
     "gatsby-plugin-postcss": "^4.2.0",
     "gatsby-plugin-react-helmet": "^4.2.0",
-    "gatsby-plugin-sharp": "^3.2.0",
     "gatsby-plugin-sitemap": "^3.2.0",
-    "gatsby-source-filesystem": "^3.2.0",
-    "gatsby-transformer-sharp": "^3.2.0",
+    "gatsby-source-filesystem": "^3.3.0",
     "intl": "^1.2.5",
     "postcss": "^8.2.9",
     "prop-types": "^15.7.2",
@@ -37,11 +34,9 @@
     "react-helmet": "^6.1.0",
     "react-intl": "^5.15.7",
     "react-redux": "^7.2.3",
-    "react-ripples": "^2.2.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",
-    "tailwindcss": "^2.1.1",
-    "tailwindcss-textshadow": "^2.1.3"
+    "tailwindcss": "^2.1.1"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^12.1.1",

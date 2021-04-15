@@ -2,7 +2,7 @@ import * as React from "react"
 import { TaskEntity } from "../../entities/TaskEntity"
 import { BaseModal } from "../BaseModal/BaseModal"
 import { FormattedMessage } from "../FormattedMessage/FormattedMessage"
-import { Exclamation, X } from "../Icons/outline"
+import { ExclamationIcon } from "@heroicons/react/outline"
 
 import {
   connector,
@@ -20,7 +20,7 @@ export const Wrapper: React.FC<{
       <div className="inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
         <div className="sm:flex sm:items-start">
           <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-red-100 rounded-full sm:mx-0 sm:h-10 sm:w-10">
-            <Exclamation className="w-6 h-6 text-red-600" />
+            <ExclamationIcon className="w-6 h-6 text-red-600" />
           </div>
           <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
             <h3

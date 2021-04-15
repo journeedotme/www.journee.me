@@ -23,7 +23,6 @@ module.exports = {
     "src/**/*.{js,jsx,ts,tsx}",
     "!**/node_modules/**",
     "!src/i18n/**",
-    "!src/components/Icons/**",
     "!**/vendor/**",
   ],
 }

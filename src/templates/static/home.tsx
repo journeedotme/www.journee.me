@@ -4,7 +4,7 @@ import { useIntl } from "react-intl"
 import { Seo } from "../../components/Seo/Seo"
 import metadata from "../../configuration/metadata.json"
 import { FormattedMessage } from "../../components/FormattedMessage/FormattedMessage"
-import SvgChevronRight from "../../components/Icons/solid/ChevronRight"
+import { ChevronRightIcon } from "@heroicons/react/solid"
 import { GoogleAuthenticationButton } from "../../components/GoogleAuthenticationButton/GoogleAuthenticationButton"
 import { IntlLink } from "../../components/IntlLink/IntlLink"
 import Logo from "../../../static/logo/logo.svg"
@@ -67,7 +67,7 @@ const Home: React.FC<{
                         <span className="ml-4 text-sm">
                           <FormattedMessage id="landing.hero.label.description" />
                         </span>
-                        <SvgChevronRight className="w-5 h-5 ml-2 text-gray-500" />
+                        <ChevronRightIcon className="w-5 h-5 ml-2 text-gray-500" />
                       </a>
 
                       <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Drawer } from "../Drawer/Drawer"
-import SvgMenu from "../Icons/outline/Menu"
+import { MenuIcon } from "@heroicons/react/outline"
 import { IntlLink } from "../IntlLink/IntlLink"
 import { Timeline } from "../Timeline/Timeline"
 import Logo from "../../../static/logo/logo.svg"
@@ -33,7 +33,7 @@ export const Wrapper: React.FC<{
               aria-expanded="false"
             >
               <span className="sr-only">Open menu</span>
-              <SvgMenu className="w-6 h-6" />
+              <MenuIcon className="w-6 h-6" />
             </button>
           </div>
         </div>
