@@ -3,6 +3,7 @@ import { CustomIntlProvider } from "./src/components/CustomIntlProvider/CustomIn
 import { App } from "./src/components/App/App"
 import dayjs from "dayjs"
 
+// TODO automatic import for all languages
 import "dayjs/locale/fr"
 
 export default ({ element, props }) => {
