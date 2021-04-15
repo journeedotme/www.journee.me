@@ -1,6 +1,6 @@
 import * as React from "react"
-import Plus from "../Icons/outline/Plus"
 import { connector, ContainerProps } from "./containers/AddTaskButton.container"
+import { PlusIcon } from "@heroicons/react/outline"
 
 export const Wrapper: React.FC<{ onClick: () => void }> = props => {
   return (
@@ -10,7 +10,7 @@ export const Wrapper: React.FC<{ onClick: () => void }> = props => {
         type="button"
         className="inline-flex items-center p-2 text-white rounded-full shadow-md bg-gradient-to-t from-blue-500 to-blue-400 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
       >
-        <Plus
+        <PlusIcon
           className="w-8 h-8"
           style={{ filter: "drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.10))" }}
         />

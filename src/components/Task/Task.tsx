@@ -2,7 +2,7 @@ import { Transition } from "@headlessui/react"
 import * as React from "react"
 import { TaskEntity } from "../../entities/TaskEntity"
 import { createDailyInterval } from "../../utils/date"
-import DotsVertical from "../Icons/outline/DotsVertical"
+import { DotsVerticalIcon } from "@heroicons/react/outline"
 import { Check } from "./components/Check/Check"
 import { connector, ContainerProps } from "./containers/Task.container"
 
@@ -26,7 +26,7 @@ export const Wrapper: React.FC<{
                 {props.task.name}
               </div>
               <button className="p-3" onClick={props.onActions}>
-                <DotsVertical className="w-6 h-6 text-gray-400" />
+                <DotsVerticalIcon className="w-6 h-6 text-gray-400" />
               </button>
             </div>
             <div className="grid grid-cols-7 px-2 mx-auto mt-2 max-w-7xl">

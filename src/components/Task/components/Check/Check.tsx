@@ -1,6 +1,5 @@
 import * as React from "react"
-import SvgCheck from "../../../Icons/outline/Check"
-import Ripples from "react-ripples"
+import { CheckIcon } from "@heroicons/react/outline"
 import { connector, ContainerProps } from "./containers/Check.container"
 
 export const Wrapper: React.FC<{
@@ -17,7 +16,7 @@ export const Wrapper: React.FC<{
       }`}
     >
       {props.active && (
-        <SvgCheck
+        <CheckIcon
           style={{ filter: "drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.10))" }}
         />
       )}
