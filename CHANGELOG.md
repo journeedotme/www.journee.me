@@ -1,3 +1,13 @@
+<a name="1.6.1"></a>
+## [1.6.1](https://github.com/journeedotme/www.journee.me/compare/v1.6.0...v1.6.1) (2021-04-15)
+
+
+### Bug Fixes
+
+* **seo:** add absolute url on hreflang ([#17](https://github.com/journeedotme/www.journee.me/issues/17)) ([4c053e3](https://github.com/journeedotme/www.journee.me/commit/4c053e3))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/journeedotme/www.journee.me/compare/v1.5.0...v1.6.0) (2021-04-14)
 
