@@ -36,6 +36,48 @@ module.exports = {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/fr/app/*`, `/app/*`] },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-D3C9L6CHGT"],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-amplitude-analytics`,
+      options: {
+        // Specify the API key for your Amplitude Project (required)
+        apiKey: "e6bda99915ab26d8e2150fc1cf58756f",
+        // Puts tracking script in the head instead of the body (optional)
+        head: false,
+        // Prevents loading Amplitude and logging events if visitors have "Do Not Track" enabled (optional)
+        // respectDNT: true,
+        // Avoids sending pageview hits from custom paths (optional)
+        // exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Override the default event types (optional)
+        eventTypes: {
+          outboundLinkClick: "outbound/clik",
+          pageView: "page/view",
+        },
+        // Amplitude JS SDK configuration options (optional)
+        amplitudeConfig: {
+          saveEvents: true,
+          includeUtm: true,
+          includeReferrer: true,
+        },
+        // Specify NODE_ENVs in which the plugin should be loaded (optional)
+        environments: ["production"],
+      },
+    },
+    // TODO Faire un ConsoleLogService et SentryLogService et activer Sentry seulement en mode production
+    // et mettre le DSN dans les secrets de Github
+    // Penser à faire la même chose avec Firebase
+    {
+      resolve: "@sentry/gatsby",
+      options: {
+        dsn: process.env.SENTRY_DSN,
+        sampleRate: 0.7,
+      },
+    },
     "gatsby-plugin-postcss",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
