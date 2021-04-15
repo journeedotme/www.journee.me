@@ -1,20 +1,20 @@
-import React, { useEffect } from "react"
+import React, { ReactElement, useEffect } from "react"
 import { connector, ContainerProps } from "./containers/App.container"
 
 export type Props = {
   onMount: () => void
 }
 
-export const Wrapper: React.FC<Props> = ({ onMount, children }) => {
+export const Wrapper: React.FC<Props> = props => {
   useEffect(() => {
-    onMount()
+    props.onMount()
   }, [])
 
-  return <>{children}</>
+  return <>{props.children}</>
 }
 
-export const Container: React.FC<ContainerProps> = props => (
-  <Wrapper {...props} />
-)
+export const Container: React.FC<
+  ContainerProps & { children: ReactElement }
+> = props => <Wrapper {...props} />
 
 export const App = connector(Container)
