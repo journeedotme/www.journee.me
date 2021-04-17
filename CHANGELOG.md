@@ -1,3 +1,13 @@
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/journeedotme/www.journee.me/compare/v1.7.0...v1.8.0) (2021-04-17)
+
+
+### Features
+
+* **pwa:** enable pwa ([#22](https://github.com/journeedotme/www.journee.me/issues/22)) ([e78e682](https://github.com/journeedotme/www.journee.me/commit/e78e682))
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/journeedotme/www.journee.me/compare/v1.6.2...v1.7.0) (2021-04-17)
 
