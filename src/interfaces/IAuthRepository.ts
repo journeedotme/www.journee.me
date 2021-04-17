@@ -2,6 +2,7 @@ import { UserEntity } from "../entities/UserEntity"
 
 export type AuthenticateWithGoogleReturnErrorType =
   | "auth/auth-domain-config-required"
+  | "auth/user-not-found"
   | "auth/operation-not-supported-in-this-environment"
   | "auth/unauthorized-domain"
 

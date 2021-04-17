@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const { defaultLanguage } = require("./src/configuration/languages.json")
 const siteMetadata = require("./src/configuration/metadata.json")
 
@@ -39,7 +41,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["G-D3C9L6CHGT"],
+        trackingIds: [process.env.FIREBASE_MEASUREMENT_ID],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: require("./firebase/client"),
       },
     },
     {
@@ -68,9 +76,6 @@ module.exports = {
         environments: ["production"],
       },
     },
-    // TODO Faire un ConsoleLogService et SentryLogService et activer Sentry seulement en mode production
-    // et mettre le DSN dans les secrets de Github
-    // Penser à faire la même chose avec Firebase
     {
       resolve: "@sentry/gatsby",
       options: {

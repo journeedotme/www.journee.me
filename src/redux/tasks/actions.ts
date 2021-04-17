@@ -1,12 +1,7 @@
 import { ThunkAction } from "redux-thunk"
 import * as types from "./types"
-import { fetching, fetchEnd, logout } from "../auth/types"
 import { RootState } from "../store"
-import {
-  CheckEntity,
-  TaskEntity,
-  TaskEntityWithoutId,
-} from "../../entities/TaskEntity"
+import { CheckEntity, TaskEntity } from "../../entities/TaskEntity"
 
 export const store = (
   payload: types.storeAction["payload"]
@@ -92,7 +87,8 @@ export const $rename = (params: {
     name: params.name,
   })
 
-  if (response.status === 200) dispatcher(rename({ task: response.task }))
+  if (response.status === 200)
+    dispatcher(rename({ task: { id: params.id, name: params.name } }))
 }
 
 export const $remove = (params: {

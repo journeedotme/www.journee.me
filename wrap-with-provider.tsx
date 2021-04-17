@@ -1,34 +1,18 @@
 import React from "react"
 import { Provider } from "react-redux"
 
-import { InMemoryAuthRepository } from "./src/repositories/InMemoryAuthRepository"
+import { FirebaseAuthRepository } from "./src/repositories/FirebaseAuthRepository"
 
 import { init } from "./src/redux/store"
-import { InMemoryLocationService } from "./src/services/InMemoryLocationService"
 import { GatsbyLocationService } from "./src/services/GatsbyLocationService"
-import { InMemoryTasksRepository } from "./src/repositories/InMemoryTasksRepository"
+import { FirebaseTasksRepository } from "./src/repositories/FirebaseTasksRepository"
+import { Firebase } from "./src/services/Firebase"
 
 export default ({ element }) => {
-  const AuthRepository = new InMemoryAuthRepository()
-  const TasksRepository = new InMemoryTasksRepository()
+  const firebase = new Firebase()
+  const AuthRepository = new FirebaseAuthRepository(firebase)
+  const TasksRepository = new FirebaseTasksRepository(firebase)
   const LocationService = new GatsbyLocationService()
-
-  AuthRepository.register({
-    // @ts-ignore
-    id: "demo",
-    email: "inmemory@gmail.com",
-    firstName: "John",
-    lastName: "Doe",
-    username: "John Doe",
-  })
-
-  TasksRepository.create({
-    // @ts-ignore
-    id: "demo",
-    name: "Meditation",
-    user: { id: "demo" },
-    checks: new Map(),
-  })
 
   const { store } = init({}, [
     { key: "AuthRepository", value: AuthRepository },
