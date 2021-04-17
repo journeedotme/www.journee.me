@@ -1,3 +1,6 @@
+import "firebase/auth"
+import "firebase/firestore"
+
 import wrapWithIntl from "./wrap-with-intl"
 import wrapWithProvider from "./wrap-with-provider"
 

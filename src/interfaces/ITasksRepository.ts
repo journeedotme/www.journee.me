@@ -6,11 +6,10 @@ import {
 
 export type RenameResponse =
   | {
-      task: TaskEntity
       error: null
       status: 200
     }
-  | { task: null; error: "tasks/not-exists"; status: 500 }
+  | { error: "tasks/not-exists"; status: 500 }
 
 export type RemoveResponse =
   | {

@@ -46,7 +46,7 @@ export const rename = "REDUX_TASKS_RENAME"
 export interface renameAction {
   type: typeof rename
   payload: {
-    task: TaskEntity
+    task: Pick<TaskEntity, "id" | "name">
   }
 }
 

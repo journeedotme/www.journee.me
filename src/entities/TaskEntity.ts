@@ -9,6 +9,7 @@ export interface TaskEntity {
 
 export interface CheckEntity {
   id: string
+  date?: string
   task: TaskEntity["id"]
 }
 
