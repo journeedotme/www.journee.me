@@ -10,7 +10,7 @@ const fr: typeof en = {
   "landing.hero.title": "Suivez quotidiennement vos <b>tâches quotidiennes</b>",
   "landing.hero.description":
     "Vous avez des journées riches en habitudes, ou bien vous souhaitez être plus rigoureux quotidiennement ? Journee vous permet de suivre simplement vos habitudes quotidiennes et voir à quel moment vous avez réussi ou non à faire toutes vos tâches. Journee est entièrement gratuit, sans pub et Open Source.",
-  "landing.hero.signin.button.text": "Commencer (Mode démo)",
+  "landing.hero.signin.button.text": "Commencer",
 
   "tasks.seo.title": "Vos tâches quotidiennes | Journee",
   "tasks.seo.description":
