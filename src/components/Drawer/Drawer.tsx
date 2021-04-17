@@ -54,14 +54,6 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
             <div className="mt-6">
               <nav className="grid gap-y-8">
                 <IntlLink
-                  to="/"
-                  className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
-                >
-                  <span className="ml-3 text-base font-medium text-gray-900">
-                    <FormattedMessage id="drawer.home" />
-                  </span>
-                </IntlLink>
-                <IntlLink
                   to="/app/"
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
