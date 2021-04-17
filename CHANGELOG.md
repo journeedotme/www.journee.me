@@ -1,3 +1,13 @@
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/journeedotme/www.journee.me/compare/v1.6.2...v1.7.0) (2021-04-17)
+
+
+### Features
+
+* **firebase:** add firestore for persisting data ([#20](https://github.com/journeedotme/www.journee.me/issues/20)) ([c3e865c](https://github.com/journeedotme/www.journee.me/commit/c3e865c))
+
+
+
 <a name="1.6.2"></a>
 ## [1.6.2](https://github.com/journeedotme/www.journee.me/compare/v1.6.1...v1.6.2) (2021-04-15)
 
