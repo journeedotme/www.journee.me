@@ -15,8 +15,8 @@ module.exports = {
         start_url: `/app/?pwa=true`,
         background_color: `#F9FAFB`,
         theme_color: `#3B82F6`,
-        display: `minimal-ui`,
-        icon: `static/logo/logo.svg`,
+        display: `standalone`,
+        icon: `static/manifest/512x512.svg`,
       },
     },
     {
