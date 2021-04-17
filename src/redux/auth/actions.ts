@@ -58,7 +58,7 @@ export const $isAuthenticated = (): ThunkAction<
   return di.AuthRepository.isAuthenticated().then(response => {
     dispatcher(fetchEnd())
     if (!response.authenticated)
-      return di.LocationService.navigate(getUrl("/signin/", locale.lang).url)
+      return di.LocationService.navigate(getUrl("/app/signin/", locale.lang).url)
     dispatcher(authenticate({ user: response.user }))
     return response
   })
