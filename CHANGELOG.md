@@ -1,3 +1,13 @@
+<a name="1.8.1"></a>
+## [1.8.1](https://github.com/journeedotme/www.journee.me/compare/v1.8.0...v1.8.1) (2021-04-18)
+
+
+### Bug Fixes
+
+* **desktop:** tasks page responsive for desktop [#27](https://github.com/journeedotme/www.journee.me/issues/27) ([e53d595](https://github.com/journeedotme/www.journee.me/commit/e53d595))
+
+
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/journeedotme/www.journee.me/compare/v1.7.0...v1.8.0) (2021-04-17)
 
