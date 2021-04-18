@@ -33,9 +33,9 @@ const Item: React.FC<{
 
 export const Wrapper: React.FC = props => {
   return (
-    <div className="relative bg-white">
-      <div className="px-2 py-2 mx-auto max-w-7xl">
-        <div className="w-full bg-gray-100 rounded">
+    <div className="relative">
+      <div className="max-w-2xl px-2 py-2 mx-auto">
+        <div className="w-full bg-gray-100 rounded-lg">
           <div className="grid grid-cols-7">
             {createDailyIntervalWithDayNumberAndName(7).map(
               ({ number, day }, index) => (

@@ -5,7 +5,7 @@
   "version": "1.8.0",
   "author": "Kevin Marques <marques.developpement@gmail.com>",
   "dependencies": {
-    "@headlessui/react": "^0.3.2",
+    "@headlessui/react": "^1.0.0",
     "@heroicons/react": "^1.0.1",
     "@sentry/gatsby": "^6.2.5",
     "@tailwindcss/aspect-ratio": "^0.2.0",
