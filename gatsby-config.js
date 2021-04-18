@@ -16,7 +16,38 @@ module.exports = {
         background_color: `#F9FAFB`,
         theme_color: `#3B82F6`,
         display: `standalone`,
-        icon: `static/manifest/512x512.svg`,
+        icons: [
+          {
+            src: "/manifest/16x16.png",
+            sizes: "16x16",
+            type: "image/png",
+          },
+          {
+            src: "/manifest/64x64.png",
+            sizes: "64x64",
+            type: "image/png",
+          },
+          {
+            src: "/manifest/32x32.png",
+            sizes: "32x32",
+            type: "image/png",
+          },
+          {
+            src: "/manifest/24x24.png",
+            sizes: "24x24",
+            type: "image/png",
+          },
+          {
+            src: "/manifest/192x192.png",
+            type: "image/png",
+            sizes: "192x192",
+          },
+          {
+            src: "/manifest/512x512.png",
+            type: "image/png",
+            sizes: "512x512",
+          },
+        ],
       },
     },
     {
