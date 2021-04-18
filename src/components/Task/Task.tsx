@@ -18,7 +18,7 @@ export const Wrapper: React.FC<{
       enterFrom="-translate-y-full opacity-0"
       enterTo="translate-x-0 opacity-100"
     >
-      <div className="relative bg-white shadow-sm">
+      <div className="relative max-w-2xl mx-auto bg-white shadow-sm">
         <div className="w-full pt-1 pb-5">
           <div className="w-full">
             <div className="flex items-center justify-between">
