@@ -1,6 +1,6 @@
 ---
 name: "\U0001F680 Feature request"
-about: Suggest a feature for Angular Framework
+about: Suggest a feature for Journee
 
 ---
 <!--🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅
@@ -14,10 +14,6 @@ Existing issues often contain information about workarounds, resolution, or prog
 
 
 # 🚀 feature request
-
-### Relevant Package
-<!-- Can you pin-point one or more @angular/* packages the are relevant for this feature request? -->
-<!-- ✍️edit: --> This feature request is for @angular/....
 
 
 ### Description
