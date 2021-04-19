@@ -1,104 +1,159 @@
 
+<h1 align="center">Journee - Track your daily habits.</h1>
+
 <p align="center">
-  <a href="https://www.journee.me">
-    <img alt="logo" src="/.github/readme/logo.png" width="80" />
+  <img src="/.github/readme/logo.png" alt="journee-logo" width="120px" height="120px"/>
+  <br>
+  <i>Angular is a development platform for building mobile and desktop web applications
+    <br> using Typescript/JavaScript and other languages.</i>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://www.journee.me"><strong>www.journee.me</strong></a>
+  <br>
+</p>
+
+<p align="center">
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/journeedotme/www.journee.me/issues">Submit an Issue</a>
+  <br>
+  <br>
+</p>
+
+
+<p align="center">
+  <a href="https://codecov.io/gh/journeedotme/www.journee.me">
+    <img src="https://codecov.io/gh/journeedotme/www.journee.me/branch/main/graph/badge.svg?token=2AIY3LV7LD" alt="Coverage Status" />
+  </a>&nbsp;
+  <a href="https://img.shields.io/github/license/journeedotme/www.journee.me">
+    <img src="https://img.shields.io/github/license/journeedotme/www.journee.me" alt="MIT License" />
+  </a>&nbsp;
+  <a href="https://conventionalcommits.org">
+    <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits" />
   </a>
 </p>
-<h1 align="center">
-  Journee
-</h1>
 
-[![codecov](https://codecov.io/gh/journeedotme/www.journee.me/branch/main/graph/badge.svg?token=2AIY3LV7LD)](https://codecov.io/gh/journeedotme/www.journee.me)
-[![LICENSE](https://img.shields.io/github/license/journeedotme/www.journee.me)](LICENSE)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+<hr>
 
+## Documentation
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Get started with Angular, learn the fundamentals and explore advanced topics on our documentation website.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+- [Getting Started][quickstart]
+- [Architecture][architecture]
+- [Components and Templates][componentstemplates]
+- [Forms][forms]
+- [API][api]
 
-## 🚀 Quick start
+### Advanced
 
-1.  **Create a Gatsby site.**
+- [Angular Elements][angularelements]
+- [Server Side Rendering][ssr]
+- [Schematics][schematics]
+- [Lazy Loading][lazyloading]
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## Development Setup
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+### Prerequisites
 
-1.  **Start developing.**
+- Install [Node.js] which includes [Node Package Manager][npm]
 
-    Navigate into your new site’s directory and start it up.
+### Setting Up a Project
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+Install the Angular CLI globally:
 
-1.  **Open the source code and start editing!**
+```
+npm install -g @angular/cli
+```
 
-    Your site is now running at `http://localhost:8000`!
+Create workspace:
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+```
+ng new [PROJECT NAME]
+```
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+Run the application:
 
-## 🧐 What's inside?
+```
+cd [PROJECT NAME]
+ng serve
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+## Quickstart
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+[Get started in 5 minutes][quickstart].
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+## Ecosystem
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+<p>
+  <img src="/docs/images/angular-ecosystem-logos.png" alt="angular ecosystem logos" width="500px" height="auto">
+</p>
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+- [Angular Command Line (CLI)][cli]
+- [Angular Material][angularmaterial]
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+## Changelog
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+[Learn about the latest improvements][changelog].
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+## Upgrading
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+Check out our [upgrade guide](https://update.angular.io/) to find out the best way to upgrade your project.
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+## Contributing
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+### Contributing Guidelines
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+Read through our [contributing guidelines][contributing] to learn about our submission process, coding rules and more.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+### Want to Help?
 
-## 🎓 Learning Gatsby
+Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/journeedotme/www.journee.me/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/journeedotme/www.journee.me/labels/good%20first%20issue)</kbd>.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+### Code of Conduct
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+## Community
 
-## 💫 Deploy
+Join the conversation and help the community.
 
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
+- [Twitter][twitter]
+- [Discord][discord]
+- [Gitter][gitter]
+- [YouTube][youtube]
+- [StackOverflow][stackoverflow]
+- Find a Local [Meetup][meetup]
 
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
+[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/journeedotme/www.journee.me)
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+**Love Angular? Give our repo a star :star: :arrow_up:.**
+
+[contributing]: CONTRIBUTING.md
+[quickstart]: https://angular.io/start
+[changelog]: CHANGELOG.md
+[ng]: https://angular.io
+[documentation]: https://angular.io/docs
+[angularmaterial]: https://material.angular.io/
+[cli]: https://cli.angular.io/
+[architecture]: https://angular.io/guide/architecture
+[componentstemplates]: https://angular.io/guide/displaying-data
+[forms]: https://angular.io/guide/forms-overview
+[api]: https://angular.io/api
+[angularelements]: https://angular.io/guide/elements
+[ssr]: https://angular.io/guide/universal
+[schematics]: https://angular.io/guide/schematics
+[lazyloading]: https://angular.io/guide/lazy-loading-ngmodules
+[node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/get-npm
+[codeofconduct]: CODE_OF_CONDUCT.md
+[twitter]: https://www.twitter.com/angular
+[discord]: https://discord.gg/angular
+[gitter]: https://gitter.im/journeedotme/www.journee.me
+[stackoverflow]: https://stackoverflow.com/questions/tagged/angular
+[youtube]: https://youtube.com/angular
+[meetup]: https://www.meetup.com/find/?keywords=angular"
