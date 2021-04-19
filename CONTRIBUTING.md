@@ -248,5 +248,5 @@ The content of the commit message body should contain:
 
 [coc]: https://github.com/journeedotme/www.journee.me/blob/main/CODE_OF_CONDUCT.md
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
-[dev-doc]: https://github.com/angular/angular/blob/main/docs/DEVELOPER.md
+[dev-doc]: https://github.com/journeedotme/www.journee.me/blob/main/DEVELOPER.md
 [github]: https://github.com/journeedotme/www.journee.me

@@ -4,8 +4,7 @@
 <p align="center">
   <img src="/.github/readme/logo.png" alt="journee-logo" width="120px" height="120px"/>
   <br>
-  <i>Angular is a development platform for building mobile and desktop web applications
-    <br> using Typescript/JavaScript and other languages.</i>
+  <i>Journee is a web application that helps you to track your daily habits.</i>
   <br>
 </p>
 
@@ -39,70 +38,35 @@
 
 ## Documentation
 
-Get started with Angular, learn the fundamentals and explore advanced topics on our documentation website.
+Get started with Journee, learn the fundamentals and explore advanced topics on our documentation website.
 
-- [Getting Started][quickstart]
-- [Architecture][architecture]
-- [Components and Templates][componentstemplates]
-- [Forms][forms]
-- [API][api]
-
-### Advanced
-
-- [Angular Elements][angularelements]
-- [Server Side Rendering][ssr]
-- [Schematics][schematics]
-- [Lazy Loading][lazyloading]
+- [Getting Started][documentation]
 
 ## Development Setup
 
 ### Prerequisites
 
 - Install [Node.js] which includes [Node Package Manager][npm]
+- Install [Yarn][yarn]
 
-### Setting Up a Project
+### Setting Up
 
-Install the Angular CLI globally:
-
-```
-npm install -g @angular/cli
-```
-
-Create workspace:
+Install the dependencies:
 
 ```
-ng new [PROJECT NAME]
+yarn install
 ```
 
 Run the application:
 
 ```
-cd [PROJECT NAME]
-ng serve
+yarn start
 ```
 
-Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
-
-## Quickstart
-
-[Get started in 5 minutes][quickstart].
-
-## Ecosystem
-
-<p>
-  <img src="/docs/images/angular-ecosystem-logos.png" alt="angular ecosystem logos" width="500px" height="auto">
-</p>
-
-- [Angular Command Line (CLI)][cli]
-- [Angular Material][angularmaterial]
 
 ## Changelog
 
 [Learn about the latest improvements][changelog].
-
-## Upgrading
-
-Check out our [upgrade guide](https://update.angular.io/) to find out the best way to upgrade your project.
 
 ## Contributing
 
@@ -116,44 +80,15 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! R
 
 ### Code of Conduct
 
-Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
+Help us keep Journee open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
 
-## Community
 
-Join the conversation and help the community.
-
-- [Twitter][twitter]
-- [Discord][discord]
-- [Gitter][gitter]
-- [YouTube][youtube]
-- [StackOverflow][stackoverflow]
-- Find a Local [Meetup][meetup]
-
-[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/journeedotme/www.journee.me)
-
-**Love Angular? Give our repo a star :star: :arrow_up:.**
+**Love Journee? Give our repo a star :star: :arrow_up:.**
 
 [contributing]: CONTRIBUTING.md
-[quickstart]: https://angular.io/start
+[documentation]: DEVELOPER.md
 [changelog]: CHANGELOG.md
-[ng]: https://angular.io
-[documentation]: https://angular.io/docs
-[angularmaterial]: https://material.angular.io/
-[cli]: https://cli.angular.io/
-[architecture]: https://angular.io/guide/architecture
-[componentstemplates]: https://angular.io/guide/displaying-data
-[forms]: https://angular.io/guide/forms-overview
-[api]: https://angular.io/api
-[angularelements]: https://angular.io/guide/elements
-[ssr]: https://angular.io/guide/universal
-[schematics]: https://angular.io/guide/schematics
-[lazyloading]: https://angular.io/guide/lazy-loading-ngmodules
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm
 [codeofconduct]: CODE_OF_CONDUCT.md
-[twitter]: https://www.twitter.com/angular
-[discord]: https://discord.gg/angular
-[gitter]: https://gitter.im/journeedotme/www.journee.me
-[stackoverflow]: https://stackoverflow.com/questions/tagged/angular
-[youtube]: https://youtube.com/angular
-[meetup]: https://www.meetup.com/find/?keywords=angular"
+[yarn]: https://yarnpkg.com

@@ -59,13 +59,11 @@ yarn install
 
 ## Starting
 
-To build Journee run:
+To launch the website, run:
 
 ```shell
-node ./scripts/build/build-packages-dist.js
+yarn start
 ```
-
-- Results are put in the `dist/packages-dist` folder.
 
 ## Running Tests Locally
 
