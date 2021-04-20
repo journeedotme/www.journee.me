@@ -1,3 +1,13 @@
+<a name="1.8.2"></a>
+## [1.8.2](https://github.com/journeedotme/www.journee.me/compare/v1.8.1...v1.8.2) (2021-04-20)
+
+
+### Bug Fixes
+
+* **lang:** automatic detection of language on application mode ([#30](https://github.com/journeedotme/www.journee.me/issues/30)) ([a0ac5e4](https://github.com/journeedotme/www.journee.me/commit/a0ac5e4))
+
+
+
 <a name="1.8.1"></a>
 ## [1.8.1](https://github.com/journeedotme/www.journee.me/compare/v1.8.0...v1.8.1) (2021-04-18)
 

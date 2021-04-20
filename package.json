@@ -2,7 +2,7 @@
   "name": "www.journee.me",
   "private": true,
   "description": "Track your daily habits with Journee.",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "author": "Kevin Marques <marques.developpement@gmail.com>",
   "dependencies": {
     "@headlessui/react": "^1.0.0",
