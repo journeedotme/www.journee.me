@@ -1,5 +1,5 @@
 import React from "react"
-import { render, waitFor } from "../../../utils/test-utils"
+import { render, waitFor } from "../../../utils/for-tests/test-utils"
 import { Seo } from "../Seo"
 
 describe("<Seo /> test suite", () => {

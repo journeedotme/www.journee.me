@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyLinkProps, Link } from "gatsby"
+import { Link } from "gatsby"
 import { useIntl } from "react-intl"
 import { getUrl } from "../../configuration/getTranslations"
 

@@ -1,4 +1,4 @@
-import configuration from "./languages.json"
+import configuration from "./languages"
 
 export const getTranslations = () => {
   const languages = configuration.languages as Array<string>
@@ -15,4 +15,12 @@ export const getUrl = (url: string, lang: string) => {
 
 export const getUrls = (url: string) => {
   return configuration.languages.map(lang => getUrl(url, lang))
+}
+
+export const getLang = (locale: string) => {
+  const found = configuration.languages.find(lang => {
+    return locale.includes(lang)
+  })
+
+  return found || configuration.defaultLanguage
 }

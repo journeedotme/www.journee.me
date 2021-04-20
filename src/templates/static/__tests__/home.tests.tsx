@@ -1,5 +1,5 @@
 import React from "react"
-import { render } from "../../../utils/test-utils"
+import { render } from "../../../utils/for-tests/test-utils"
 import Home from "../home"
 
 describe("<Home /> test suite", () => {

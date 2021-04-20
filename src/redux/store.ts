@@ -22,18 +22,10 @@ export const reducers = combineReducers({
 
 export type RootState = ReturnType<typeof reducers>
 
-export const init = (initialState = {}, di: DiInjectable[]) => {
+export const init = (initialState = {}, di: DiInjectable) => {
   const store = createStore(reducers, initialState, enhancer)
 
-  di.forEach(({ key, value }) => {
-    store.dispatch(
-      //@ts-ignore
-      actions.di.register({
-        key,
-        value,
-      })
-    )
-  })
+  store.dispatch(actions.di.register(di))
 
   return { store }
 }

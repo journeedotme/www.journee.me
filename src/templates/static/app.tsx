@@ -3,23 +3,14 @@ import { Router } from "@reach/router"
 import { PageProps } from "gatsby"
 import { TasksRoute } from "../app/tasks"
 import { Protected } from "../../components/Protected/Protected"
-import { getUrl } from "../../configuration/getTranslations"
 import SigninRoute from "../app/signin"
 
-const Application: React.FC<PageProps<any, { langKey: string }>> = props => (
-  <Router basepath={getUrl("/app/", props.pageContext.langKey).url}>
+const Application: React.FC<PageProps> = props => (
+  <Router basepath="/app/">
     <Protected path="/">
-      <TasksRoute
-        path="/"
-        pathname={props.location.pathname}
-        langKey={props.pageContext.langKey}
-      />
+      <TasksRoute path="/" pathname={props.location.pathname} />
     </Protected>
-    <SigninRoute
-      path="/signin/"
-      pathname={props.location.pathname}
-      langKey={props.pageContext.langKey}
-    />
+    <SigninRoute path="/signin/" pathname={props.location.pathname} />
   </Router>
 )
 

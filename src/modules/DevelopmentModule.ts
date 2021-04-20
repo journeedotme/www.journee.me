@@ -1,6 +1,7 @@
 import { IModule } from "../interfaces/IModule"
 import { InMemoryAuthRepository } from "../repositories/InMemoryAuthRepository"
 import { InMemoryTasksRepository } from "../repositories/InMemoryTasksRepository"
+import { NavigatorLangRepository } from "../repositories/NavigatorLangRepository"
 import { GatsbyLocationService } from "../services/GatsbyLocationService"
 
 export class DevelopmentModule implements IModule {
@@ -8,6 +9,7 @@ export class DevelopmentModule implements IModule {
     const AuthRepository = new InMemoryAuthRepository()
     const TasksRepository = new InMemoryTasksRepository()
     const LocationService = new GatsbyLocationService()
+    const LangRepository = new NavigatorLangRepository()
 
     AuthRepository.register({
       //@ts-ignore
@@ -25,6 +27,6 @@ export class DevelopmentModule implements IModule {
       },
     })
 
-    return { AuthRepository, TasksRepository, LocationService }
+    return { AuthRepository, TasksRepository, LocationService, LangRepository }
   }
 }

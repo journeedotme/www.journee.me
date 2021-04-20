@@ -1,28 +1,15 @@
 import { init as createStore } from "../redux/store"
 import { actions } from "../redux/actions"
-
-import { InMemoryAuthRepository } from "../repositories/InMemoryAuthRepository"
-import { InMemoryLocationService } from "../services/InMemoryLocationService"
-import { InMemoryTasksRepository } from "../repositories/InMemoryTasksRepository"
+import { TestModule } from "../modules/TestModule"
 
 export const createStoreForTests = (initialState = {}) => {
-  const AuthRepository = new InMemoryAuthRepository()
-  const TasksRepository = new InMemoryTasksRepository()
-  const LocationService = new InMemoryLocationService()
+  const di = new TestModule().build()
 
-  const { store } = createStore(initialState, [
-    { key: "AuthRepository", value: AuthRepository },
-    { key: "TasksRepository", value: TasksRepository },
-    { key: "LocationService", value: LocationService },
-  ])
+  const { store } = createStore(initialState, di)
 
   return {
     store,
     actions,
-    di: {
-      AuthRepository,
-      LocationService,
-      TasksRepository,
-    },
+    di,
   }
 }

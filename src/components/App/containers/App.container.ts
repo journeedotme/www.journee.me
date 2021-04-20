@@ -1,9 +1,9 @@
 import { connect, ConnectedProps } from "react-redux"
 import { actions } from "../../../redux/actions"
 
-const mapDispatch = (dispatch: any, props: { lang: string }) => ({
+const mapDispatch = (dispatch: any) => ({
   onMount: () => {
-    dispatch(actions.locale.store({ lang: props.lang }))
+    dispatch(actions.locale.$load())
   },
 })
 

@@ -1,6 +1,6 @@
 require("dotenv").config()
 
-const { defaultLanguage } = require("./src/configuration/languages.json")
+const { defaultLanguage } = require("./src/configuration/languages")
 const siteMetadata = require("./src/configuration/metadata.json")
 
 module.exports = {
