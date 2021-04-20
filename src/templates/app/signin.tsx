@@ -7,11 +7,11 @@ import { XIcon } from "@heroicons/react/outline"
 import Logo from "../../../static/logo/logo.svg"
 import { FormattedMessage } from "../../components/FormattedMessage/FormattedMessage"
 import { IntlLink } from "../../components/IntlLink/IntlLink"
+import { defaultLanguage } from "../../configuration/languages"
 
 const SigninRoute: React.FC<
   {
     pathname: string
-    langKey: string
   } & RouteComponentProps
 > = props => {
   const intl = useIntl()
@@ -23,7 +23,7 @@ const SigninRoute: React.FC<
         title={intl.formatMessage({ id: "signin.seo.title" })}
         description={intl.formatMessage({ id: "signin.seo.description" })}
         pathname={props.pathname}
-        lang={props.langKey}
+        lang={defaultLanguage}
         canonical={"/app/signin/"}
       />
 

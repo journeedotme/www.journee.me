@@ -1,22 +1,10 @@
 import * as types from "./types"
-import { IAuthRepository } from "../../interfaces/IAuthRepository"
-import { InMemoryAuthRepository } from "../../repositories/InMemoryAuthRepository"
-import { InMemoryLocationService } from "../../services/InMemoryLocationService"
-import { ILocationService } from "../../interfaces/ILocationService"
-import { ITasksRepository } from "../../interfaces/ITasksRepository"
-import { InMemoryTasksRepository } from "../../repositories/InMemoryTasksRepository"
+import { TestModule } from "../../modules/TestModule"
+import { Modules } from "../../interfaces/IModule"
 
-type DiState = {
-  AuthRepository: IAuthRepository
-  LocationService: ILocationService
-  TasksRepository: ITasksRepository
-}
+type DiState = Modules
 
-const initialState: DiState = {
-  AuthRepository: new InMemoryAuthRepository(),
-  TasksRepository: new InMemoryTasksRepository(),
-  LocationService: new InMemoryLocationService(),
-}
+const initialState: DiState = new TestModule().build()
 
 export function diReducer(
   state = initialState,
@@ -25,7 +13,7 @@ export function diReducer(
   if (action.type === types.register) {
     return {
       ...state,
-      [action.payload.key]: action.payload.value,
+      ...action.payload,
     }
   }
 

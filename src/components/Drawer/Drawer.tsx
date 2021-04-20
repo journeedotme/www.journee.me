@@ -4,9 +4,9 @@ import { useLocation } from "@reach/router"
 import { connector, ContainerProps } from "./containers/Drawer.container"
 import { UserEntity } from "../../entities/UserEntity"
 import { XIcon } from "@heroicons/react/outline"
-import { IntlLink } from "../IntlLink/IntlLink"
 import { FormattedMessage } from "../FormattedMessage/FormattedMessage"
 import Logo from "../../../static/logo/logo.svg"
+import { Link } from "gatsby"
 
 export type DrawerProps = {
   onClose: () => void
@@ -53,14 +53,14 @@ export const DrawerWrapper: React.FC<DrawerProps> = props => {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <IntlLink
+                <Link
                   to="/app/"
                   className="flex items-center py-3 -m-3 rounded-md hover:bg-gray-50"
                 >
                   <span className="ml-3 text-base font-medium text-gray-900">
                     <FormattedMessage id="drawer.tasks" />
                   </span>
-                </IntlLink>
+                </Link>
               </nav>
             </div>
           </div>

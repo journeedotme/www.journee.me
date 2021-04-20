@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Drawer } from "../Drawer/Drawer"
 import { MenuIcon } from "@heroicons/react/outline"
-import { IntlLink } from "../IntlLink/IntlLink"
 import { Timeline } from "../Timeline/Timeline"
 import Logo from "../../../static/logo/logo.svg"
 import { connector, ContainerProps } from "./containers/Navbar.container"
+import { Link } from "gatsby"
 
 export const Wrapper: React.FC<{
   onOpen: () => void
@@ -20,10 +20,10 @@ export const Wrapper: React.FC<{
       <div className="px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between py-4">
           <div className="flex justify-start">
-            <IntlLink to="/app/">
+            <Link to="/app/">
               <span className="sr-only">Journee</span>
               <img className="w-auto h-9" src={Logo} alt="Journee" />
-            </IntlLink>
+            </Link>
           </div>
           <div className="-my-2 -mr-2">
             <button

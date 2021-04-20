@@ -11,11 +11,11 @@ import { ActionsTaskModal } from "../../components/ActionsTaskModal/ActionsTaskM
 import { ModalOverlay } from "../../components/ModalOverlay/ModalOverlay"
 import { Tasks } from "../../components/Tasks/Tasks"
 import { MotivationMessages } from "../../components/MotivationMessages/MotivationMessages"
+import { defaultLanguage } from "../../configuration/languages"
 
 export const TasksRoute: React.FC<
   {
     pathname: string
-    langKey: string
   } & RouteComponentProps
 > = props => {
   const intl = useIntl()
@@ -27,7 +27,7 @@ export const TasksRoute: React.FC<
         title={intl.formatMessage({ id: "tasks.seo.title" })}
         description={intl.formatMessage({ id: "tasks.seo.description" })}
         pathname={props.pathname}
-        lang={props.langKey}
+        lang={defaultLanguage}
         canonical={"/tasks/"}
       />
 

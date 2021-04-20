@@ -29,7 +29,7 @@ export const $authenticateWithGoogle = (): ThunkAction<
   any,
   any
 > => async (dispatcher, getState) => {
-  const { di, locale } = getState()
+  const { di } = getState()
 
   dispatcher(fetching())
 
@@ -40,7 +40,7 @@ export const $authenticateWithGoogle = (): ThunkAction<
 
   dispatcher(authenticate({ user: response.user }))
 
-  di.LocationService.navigate(getUrl("/app/", locale.lang).url)
+  di.LocationService.navigate("/app/")
 
   dispatcher(fetchEnd())
 }
@@ -51,14 +51,14 @@ export const $isAuthenticated = (): ThunkAction<
   any,
   any
 > => async (dispatcher, getState) => {
-  const { di, locale } = getState()
+  const { di } = getState()
 
   dispatcher(fetching())
 
   return di.AuthRepository.isAuthenticated().then(response => {
     dispatcher(fetchEnd())
     if (!response.authenticated)
-      return di.LocationService.navigate(getUrl("/app/signin/", locale.lang).url)
+      return di.LocationService.navigate("/app/signin/")
     dispatcher(authenticate({ user: response.user }))
     return response
   })
@@ -68,13 +68,13 @@ export const $logout = (): ThunkAction<any, RootState, any, any> => async (
   dispatcher,
   getState
 ) => {
-  const { di, locale } = getState()
+  const { di } = getState()
 
   dispatcher(fetching())
-
   dispatcher(logout())
+
   await di.AuthRepository.logout()
-  di.LocationService.navigate(getUrl("/", locale.lang).url)
+  di.LocationService.navigate("/app/signin/")
 
   dispatcher(fetchEnd())
 }

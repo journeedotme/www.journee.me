@@ -6,8 +6,8 @@ import metadata from "../../configuration/metadata.json"
 import { FormattedMessage } from "../../components/FormattedMessage/FormattedMessage"
 import { ChevronRightIcon } from "@heroicons/react/solid"
 import { GoogleAuthenticationButton } from "../../components/GoogleAuthenticationButton/GoogleAuthenticationButton"
-import { IntlLink } from "../../components/IntlLink/IntlLink"
 import Logo from "../../../static/logo/logo.svg"
+import { Link } from "gatsby"
 
 const Home: React.FC<{
   location: { pathname: string }
@@ -36,14 +36,14 @@ const Home: React.FC<{
               >
                 <div className="flex items-center flex-1">
                   <div className="flex items-center justify-between w-auto w-full">
-                    <IntlLink to="/app/">
+                    <Link to="/app/">
                       <span className="sr-only">{metadata.name}</span>
                       <img
                         className="w-auto h-10 sm:h-12"
                         src={Logo}
                         alt="Journee"
                       />
-                    </IntlLink>
+                    </Link>
                   </div>
                 </div>
               </nav>
