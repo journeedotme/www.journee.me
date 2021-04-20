@@ -9,7 +9,7 @@ import {
 
 const messages = getTranslations()
 
-export type Props = { langKey: string }
+export type Props = { langKey: string } 
 
 export const Wrapper: React.FC<Props> = props => {
   dayjs.locale(props.langKey)
