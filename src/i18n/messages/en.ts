@@ -9,6 +9,8 @@ const en = {
   "landing.hero.description":
     "Journee helps you create and maintain great habits. Completely free and open-source.",
   "landing.hero.signin.button.text": "Get Started",
+  "landing.cta.title": "Track & See what to do today",
+  "landing.cta.description": "Journee is free to use forever, so why not click below and start to track your daily habits?",
 
   "tasks.seo.title": "Your daily tasks | Journee",
   "tasks.seo.description": "Create, update and set tasks as done with Journee",
