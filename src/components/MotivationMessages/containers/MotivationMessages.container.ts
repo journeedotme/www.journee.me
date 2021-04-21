@@ -4,7 +4,7 @@ import { actions } from "../../../redux/actions"
 import { RootState } from "../../../redux/store"
 
 const mapState = (state: RootState) => ({
-  show: state.tasks.tasks.length <= 1,
+  show: state.tasks.tasks.length <= 2,
 })
 
 const mapDispatch = (dispatch: any) => ({})

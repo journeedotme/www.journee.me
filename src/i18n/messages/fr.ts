@@ -11,6 +11,9 @@ const fr: typeof en = {
   "landing.hero.description":
     "Vous avez des journées riches en habitudes, ou bien vous souhaitez être plus rigoureux quotidiennement ? Journee vous permet de suivre simplement vos habitudes quotidiennes et voir à quel moment vous avez réussi ou non à faire toutes vos tâches. Journee est entièrement gratuit, sans pub et Open Source.",
   "landing.hero.signin.button.text": "Commencer",
+  "landing.cta.title": "Suivez vos tâches quotidiennes dès maintenant !",
+  "landing.cta.description":
+    "Journee est gratuit pour toujours donc pourquoi ne pas cliquer sur le bouton et commencer dès aujourd'hui à suivre vos tâches quotidiennes ?",
 
   "tasks.seo.title": "Vos tâches quotidiennes | Journee",
   "tasks.seo.description":
