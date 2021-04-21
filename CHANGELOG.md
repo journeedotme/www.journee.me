@@ -1,3 +1,13 @@
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/journeedotme/www.journee.me/compare/v1.8.2...v1.9.0) (2021-04-21)
+
+
+### Features
+
+* **landing:** change landing page design [#31](https://github.com/journeedotme/www.journee.me/issues/31) ([f175907](https://github.com/journeedotme/www.journee.me/commit/f175907))
+
+
+
 <a name="1.8.2"></a>
 ## [1.8.2](https://github.com/journeedotme/www.journee.me/compare/v1.8.1...v1.8.2) (2021-04-20)
 
